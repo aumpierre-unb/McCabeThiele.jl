@@ -1,4 +1,4 @@
-# McCabeThiele.jl
+# McCabeThiele.jl (under construction)
 <!-- 
 [![DOI](https://zenodo.org/badge/524550191.svg)](https://zenodo.org/badge/latestdoi/524550191)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
