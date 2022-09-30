@@ -14,7 +14,7 @@ module McCabeThiele
 using Plots
 using Test
 
-export stages
+export stages, refmin
 
 include("stages.jl")
 include("stages_updown.jl")
