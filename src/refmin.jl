@@ -20,7 +20,7 @@ of a distillation column, given
 a matrix that relates the liquid fraction and the vapor fraction,
 the composition xD = 88 % of the distillate,
 the composition xF = 46 % of the feed, and
-the feed quality q = 54 %.
+the feed quality q = 54 %:
 
 ```
 data=[0.  0.;
@@ -44,7 +44,7 @@ from the top of the column, given
 the function that compute the vapor fraction given the liquid fraction,
 the composition xD = 88 % of the distillate,
 the composition xF = 46 % of the feed,
-the feed quality q = 54 %.
+the feed quality q = 54 %:
 
 ```
 f(x)=x.^1.11 .* (1-x).^1.09 + x;

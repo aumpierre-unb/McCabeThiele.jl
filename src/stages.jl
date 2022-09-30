@@ -35,7 +35,7 @@ the composition xB = 11 % of the column's bottom,
 the composition xD = 88 % of the distillate,
 the composition xF = 46 % of the feed,
 the feed quality q = 54 %, and
-the reflux ratio at the top of the column 70 % higher that the minimum reflux ratio.
+the reflux ratio at the top of the column 70 % higher that the minimum reflux ratio:
 
 ```
 data=[0.  0.;
@@ -64,7 +64,7 @@ the composition xD = 88 % of the distillate,
 the composition xF = 46 % of the feed,
 the feed quality q = 54 %, and
 the reflux ratio at the top of the column 70 % higher that the minimum reflux ratio,
-and plot a schematic diagram of the solution.
+and plot a schematic diagram of the solution:
 
 ```
 f(x)=x.^1.11 .* (1-x).^1.09 + x;
