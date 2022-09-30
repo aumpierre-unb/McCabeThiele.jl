@@ -1,9 +1,9 @@
 using Plots
 
 function doplot(dots, updown, f, x, y, data, X, q, R)
-    xB = X[1]
+    xD = X[1]
     xF = X[2]
-    xD = X[3]
+    xB = X[3]
     xi = X[4]
     yi = X[5]
 

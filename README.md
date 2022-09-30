@@ -33,7 +33,7 @@ using McCabeThiele
 -->
 
 ### Pre-Release Version (Under Construction)
-<!-- 
+
 The next version (under construction) of McCabeThiele
 can be installed from the [maintainer's repository](https://github.com/aumpierre-unb/McCabeThiele.jl).
 
@@ -42,16 +42,15 @@ using Pkg
 Pkg.add(path="https://github.com/aumpierre-unb/McCabeThiele.jl")
 using McCabeThiele
 ```
--->
 
 ## Citation of McCabeThiele
-<!-- 
+
 You can cite all versions (both released and pre-released), by using
-[DOI 105281/zenodo.7019888](https://doi.org/10.5281/zenodo.7019888).
+[DOI 105281/zenodo.7128962](https://doi.org/10.5281/zenodo.7128962).
 
 This DOI represents all versions, and will always resolve to the latest one.
 
-For citation of the last released version of InternalFluidFlow, please check CITATION file at the [maintainer's repository](https://github.com/aumpierre-unb/McCabeThiele.jl). -->
+For citation of the last released version of InternalFluidFlow, please check CITATION file at the [maintainer's repository](https://github.com/aumpierre-unb/McCabeThiele.jl).
 
 ## The McCabeThiele Module for Julia
 
