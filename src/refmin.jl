@@ -37,6 +37,7 @@ data=[0.  0.;
 x=[0.88 0.46];
 q=0.54;
 Rmin=refmin(data,x,q)
+```
 
 Compute the number of theoretical stages of a distillation column
 from the top of the column, given
