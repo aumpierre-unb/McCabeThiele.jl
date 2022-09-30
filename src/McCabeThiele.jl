@@ -34,25 +34,19 @@ N=strays(data2,x,q,R,false,false)
 
 See also: `Re2f`.
 """
-module InternalFluidFlow
+module McCabeThiele
 
 using Plots
 using Test
 
-export strays
+export stages
 
-include("Re2f.jl")
-include("f2Re.jl")
-include("hDeps2fRe.jl")
-include("hveps2fRe.jl")
-include("hvthk2fRe.jl")
-include("hQeps2fRe.jl")
-include("hQthk2fRe.jl")
-include("laminar.jl")
-include("turb.jl")
-include("smooth.jl")
-include("rough.jl")
-include("bissecao.jl")
-include("figure.jl")
+include("stages.jl")
+include("stages_updown.jl")
+include("stages_downup.jl")
+include("refmin.jl")
+include("doplots.jl")
+include("bissection.jl")
+include("interp1.jl")
 
 end
