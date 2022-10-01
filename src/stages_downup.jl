@@ -7,7 +7,7 @@ function stages_downup(f, X, R)
     y = [xB]
     x = [xB]
     while x[end] < xD
-        y = [y; f(x[end])]
+        y = [y, f(x[end])]
         if y[end] < yi
             x = [x, (y[end] - yi) / ((xB - yi) / (xB - xi)) + xi]
         else
