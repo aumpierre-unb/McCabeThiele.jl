@@ -70,7 +70,7 @@ and plot a schematic diagram of the solution:
 f(x)=x.^1.11 .* (1-x).^1.09 + x;
 x=[0.88 0.46 0.11];
 q=0.54;
-Rmin=refmin(data,x,q)
+Rmin=refmin(f,x,q)
 R=1.70*Rmin;
 N=stages(f,x,q,R)
 ```

@@ -50,7 +50,7 @@ the feed quality q = 54 %:
 f(x)=x.^1.11 .* (1-x).^1.09 + x;
 x=[0.88 0.46];
 q=0.54;
-Rmin=refmin(data,x,q)
+Rmin=refmin(f,x,q)
 ```
 """
 function refmin(data, X, q)
