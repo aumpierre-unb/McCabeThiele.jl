@@ -10,11 +10,11 @@ function stages_updown(f, X, R)
     y = [xD]
     while x[end] > xB
         foo(x) = (f(x) - y[end])
-        x = [x, bissection(foo, 0, 1)]
+        x = [x; bissection(foo, 0, 1)]
         if x[end] > xi
-            y = [y, R / (R + 1) * x[end] + xD / (R + 1)]
+            y = [y; R / (R + 1) * x[end] + xD / (R + 1)]
         else
-            y = [y, (xB - yi) / (xB - xi) * (x[end] - xB) + xB]
+            y = [y; (xB - yi) / (xB - xi) * (x[end] - xB) + xB]
         end
     end
     display(x)
