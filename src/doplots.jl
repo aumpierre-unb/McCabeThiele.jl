@@ -57,6 +57,7 @@ function doplot(dots, updown, f, x, y, data, X, q, R)
         seriestype=:vline, color=:magenta,
         linestyle=:dash))
 
+    display(x)
     if updown
         display(plot!(x, y,
             seriestype=:steppost, color=:cyan,

@@ -17,7 +17,7 @@ function stages_updown(f, X, R)
             y = [y, (xB - yi) / (xB - xi) * (x[end] - xB) + xB]
         end
     end
-    display(length(x))
+    display(x)
     N = length(x) - 1 - 1 + (x[end-1] - xB) / (x[end-1] - x[end])
     return N, x, y
 end
