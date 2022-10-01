@@ -1,8 +1,8 @@
-# McCabeThiele.jl (under construction)
-<!-- 
-[![DOI](https://zenodo.org/badge/524550191.svg)](https://zenodo.org/badge/latestdoi/524550191)
+# McCabeThiele.jl (Under Construction)
+
+[![DOI](https://zenodo.org/badge/543161141.svg)](https://doi.org/10.5281/zenodo.7126164)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![version](https://juliahub.com/docs/InternalFluidFlow/version.svg)](https://juliahub.com/ui/Packages/InternalFluidFlow/zGZKl)
+<!-- [![version](https://juliahub.com/docs/InternalFluidFlow/version.svg)](https://juliahub.com/ui/Packages/InternalFluidFlow/zGZKl)
 -->
 
 ## Installing and Loading McCabeThiele
@@ -12,7 +12,7 @@ from the JuliaHub repository (last released version) or from the
 [maintainer's repository](https://github.com/aumpierre-unb/McCabeThiele.jl).
 -->
 
-### Last Released Version of McCabeThiele (not yet released)
+### Last Released Version (Under Construction)
 
 <!--
 The last version of McCabeThiele can be installed from JuliaHub repository:
@@ -32,7 +32,7 @@ using McCabeThiele
 ```
 -->
 
-### Pre-Release Version (under construction)
+### Pre-Release Version (Under Construction)
 
 The next version (under construction) of McCabeThiele
 can be installed from the [maintainer's repository](https://github.com/aumpierre-unb/McCabeThiele.jl).
@@ -46,7 +46,7 @@ using McCabeThiele
 ## Citation of McCabeThiele
 
 You can cite all versions (both released and pre-released), by using
-[DOI 105281/zenodo.7128962](https://doi.org/10.5281/zenodo.7128962).
+[10.5281/zenodo.7126164](https://doi.org/10.5281/zenodo.7126164).
 
 This DOI represents all versions, and will always resolve to the latest one.
 
