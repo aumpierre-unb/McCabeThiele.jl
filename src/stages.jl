@@ -88,7 +88,7 @@ function stages(data, X, q, R, updown=true, fig=true)
     xB = X[3]
     xi = (xD / (R + 1) + xF / (q - 1)) / (q / (q - 1) - R / (R + 1))
     yi = q / (q - 1) * xi - xF / (q - 1)
-    X = [xB xF xD xi yi]
+    X = [xD xF xB xi yi]
     if updown
         N, x, y = stages_updown(f, X, R)
     else
