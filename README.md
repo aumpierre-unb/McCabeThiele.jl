@@ -6,15 +6,14 @@
 -->
 
 ## Installing and Loading McCabeThiele
-<!-- 
+
 McCabeThiele can be installed and loaded either
 from the JuliaHub repository (last released version) or from the
 [maintainer's repository](https://github.com/aumpierre-unb/McCabeThiele.jl).
--->
+
 
 ### Last Released Version (Under Construction)
 
-<!--
 The last version of McCabeThiele can be installed from JuliaHub repository:
 
 ```julia
@@ -30,7 +29,6 @@ using Pkg
 Pkg.update("McCabeThiele")
 using McCabeThiele
 ```
--->
 
 ### Pre-Release Version (Under Construction)
 
