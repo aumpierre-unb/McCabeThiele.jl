@@ -1,4 +1,4 @@
-# McCabeThiele.jl (Under Construction)
+# McCabeThiele.jl
 
 [![DOI](https://zenodo.org/badge/543161141.svg)](https://doi.org/10.5281/zenodo.7126164)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -10,7 +10,7 @@ McCabeThiele can be installed and loaded either
 from the JuliaHub repository (last released version) or from the
 [maintainer's repository](https://github.com/aumpierre-unb/McCabeThiele.jl).
 
-### Last Released Version (Under Construction)
+### Last Released Version
 
 The last version of McCabeThiele can be installed from JuliaHub repository:
 
