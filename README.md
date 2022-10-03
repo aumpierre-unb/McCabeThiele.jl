@@ -28,7 +28,7 @@ Pkg.update("McCabeThiele")
 using McCabeThiele
 ```
 
-### Pre-Release Version (Under Construction)
+### Pre-Release (Under Construction) Version
 
 The next version (under construction) of McCabeThiele
 can be installed from the [maintainer's repository](https://github.com/aumpierre-unb/McCabeThiele.jl).
