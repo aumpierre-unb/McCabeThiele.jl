@@ -2,25 +2,28 @@ include("bissection.jl")
 include("interp1.jl")
 
 @doc raw"""
-`refmin(f,X,q)`
+`r=refmin(f,X,q)`
 
 `refmin` computes the minimum value of the reflux ratio
 of a distillation column, given
 a function y = f(x) that relates the liquid fraction x and the vapor fraction y, or
 a x-y matrix of the liquid and the vapor fractions,
 the vector of the fractions of the distillate and the feed, and
-the feed quality q.
+the feed quality.
 
-See also: `stages`.
+If feed is a saturated liquid, feed quality q = 1,
+feed quality is reset to q = 1 - eps().
+
+See also: `stages`, `qR2S`.
 
 Examples
 ==========
 Compute the minimum value of the reflux ratio
 of a distillation column, given
 a matrix that relates the liquid fraction and the vapor fraction,
-the composition xD = 88 % of the distillate,
-the composition xF = 46 % of the feed, and
-the feed quality q = 54 %:
+the composition of the column's bottom is 11 %,
+the composition of the distillate is 88 %, and
+the feed quality is 54 %:
 
 ```
 data=[0.  0.;
@@ -36,24 +39,27 @@ data=[0.  0.;
       1.  1.];
 x=[0.88 0.46];
 q=0.54;
-Rmin=refmin(data,x,q)
+r=refmin(data,x,q)
 ```
 
 Compute the number of theoretical stages of a distillation column
 from the top of the column, given
 the function that compute the vapor fraction given the liquid fraction,
-the composition xD = 88 % of the distillate,
-the composition xF = 46 % of the feed,
-the feed quality q = 54 %:
+the composition of the column's bottom is 11 %,
+the composition of the distillate is 88 %, and
+the feed quality is 54 %:
 
 ```
 f(x)=x.^1.11 .* (1-x).^1.09 + x;
 x=[0.88 0.46];
 q=0.54;
-Rmin=refmin(f,x,q)
+r=refmin(f,x,q)
 ```
 """
 function refmin(data, X, q)
+    if q == 1
+        q = 1 - eps()
+    end
     if isa(data, Matrix)
         f(x) = interp1(data[:, 1], data[:, 2], x)
     else

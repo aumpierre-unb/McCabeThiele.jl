@@ -1,7 +1,9 @@
 ### TODO
 
-### McCabeThiele 0.1.2 (2022-10-02)
+### McCabeThiele 0.1.2-alpha (2022-10-04)
 * Major changes on documentation and functions
+* Function qR2S included
+* Exception for saturated liquid feed resolved
 
 ### McCabeThiele 0.1.1 (2022-09-30)
 * First release

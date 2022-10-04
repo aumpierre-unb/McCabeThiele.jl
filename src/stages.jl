@@ -4,15 +4,18 @@ include("interp1.jl")
 include("doplots.jl")
 
 @doc raw"""
-`stages(f,X,q,R[,updown[,fig]])`
+`N=stages(f,X,q,R[,updown[,fig]])`
 
 `stages` computes the number of theoretical stages
 of a distillation column using the method of McCabe-Thiele, given
 a function y = f(x) that relates the liquid fraction x and the vapor fraction y, or
 a x-y matrix of the liquid and the vapor fractions,
 the vector of the fractions of the products and the feed,
-the feed quality q, and
+the feed quality, and
 the reflux ratio R at the top of the column.
+
+If feed is a saturated liquid, feed quality q = 1,
+feed quality is reset to q = 1 - eps().
 
 By default, theoretical stages are computed
 from the stripping section to the rectifying section, updown = true.
@@ -24,17 +27,17 @@ By default, `stages` plots a schematic diagram of the solution, fig = true.
 
 If fig = false is given, no plot is shown.
 
-See also: `refmin`.
+See also: `refmin`, `qR2S`.
 
 Examples
 ==========
 Compute the number of theoretical stages of a distillation column
 from the bottom of the column, given
 a matrix that relates the liquid fraction and the vapor fraction,
-the composition xB = 11 % of the column's bottom,
-the composition xD = 88 % of the distillate,
-the composition xF = 46 % of the feed,
-the feed quality q = 54 %, and
+the composition of the column's bottom is 11 %,
+the composition of the distillate is 88 %,
+the composition of the feed is 46 %,
+the feed quality is 54 %, and
 the reflux ratio at the top of the column 70 % higher that the minimum reflux ratio:
 
 ```
@@ -51,8 +54,8 @@ data=[0.  0.;
       1.  1.];
 x=[0.88 0.46 0.11];
 q=0.54;
-Rmin=refmin(data,x,q)
-R=1.70*Rmin;
+r=refmin(data,x,q)
+R=1.70*r;
 N=stages(data,x,q,R,false,false)
 ```
 
@@ -70,12 +73,15 @@ and plot a schematic diagram of the solution:
 f(x)=x.^1.11 .* (1-x).^1.09 + x;
 x=[0.88 0.46 0.11];
 q=0.54;
-Rmin=refmin(f,x,q)
-R=1.70*Rmin;
+r=refmin(f,x,q)
+R=1.70*r;
 N=stages(f,x,q,R)
 ```
 """
 function stages(data, X, q, R, updown=true, fig=true)
+    if q == 1
+        q = 1 - eps()
+    end
     if isa(data, Matrix)
         f(x) = interp1(data[:, 1], data[:, 2], x)
         dots = true
