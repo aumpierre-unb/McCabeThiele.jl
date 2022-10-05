@@ -66,7 +66,7 @@ the vector of the fractions of the distillate and the feed, and
 the feed quality.
 
 If feed is a saturated liquid, feed quality q = 1,
-feed quality is reset to q = 1 - eps().
+feed quality is reset to q = 1 - 1e-10.
 
 **Syntax:**
 
@@ -125,7 +125,7 @@ the feed quality, and
 the reflux ratio at the top of the column.
 
 If feed is a saturated liquid, feed quality q = 1,
-feed quality is reset to q = 1 - eps().
+feed quality is reset to q = 1 - 1e-10.
 
 By default, theoretical stages are computed
 from the stripping section to the rectifying section, updown = true.
@@ -200,7 +200,7 @@ the vector of the fractions of the products and the feed, and
 the feed quality.
 
 If feed is a saturated liquid, feed quality q = 1,
-feed quality is reset to q = 1 - eps().
+feed quality is reset to q = 1 - 1e-10.
 
 **Syntax:**
 
