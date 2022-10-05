@@ -52,67 +52,9 @@ For citation of the last released version of InternalFluidFlow, please check CIT
 
 McCabeThiele provides the following functions:
 
-- refmin
 - stages
+- refmin
 - qR2S
-
-### refmin
-
-refmin computes the minimum value of the reflux ratio
-of a distillation column, given
-a function y = y(x) that relates the liquid fraction x and the vapor fraction y, or
-a x-y matrix of the liquid and the vapor fractions,
-the vector of the fractions of the distillate and the feed, and
-the feed quality.
-
-If feed is a saturated liquid, feed quality q = 1,
-feed quality is reset to q = 1 - 1e-10.
-
-**Syntax:**
-
-```dotnetcli
-r=refmin(y,X,q)
-```
-
-**Examples:**
-
-Compute the minimum value of the reflux ratio
-of a distillation column, given
-a matrix that relates the liquid fraction and the vapor fraction,
-the composition of the column's bottom is 11 %,
-the composition of the distillate is 88 %, and
-the feed quality is 54 %:
-
-```julia
-data=[0.  0.;
-      0.1 0.212;
-      0.2 0.384;
-      0.3 0.529;
-      0.4 0.651;
-      0.5 0.752;
-      0.6 0.833;
-      0.7 0.895;
-      0.8 0.942;
-      0.9 0.974;
-      1.  1.];
-x=[0.88 0.46];
-q=0.54;
-r=refmin(data,x,q)
-```
-
-Compute the number of theoretical stages of a distillation column
-from the top of the column, given
-the function that compute the vapor fraction given the liquid fraction,
-the composition of the column's bottom is 11 %,
-the composition of the distillate is 88 %, and
-the feed quality is 54 %:
-
-```julia
-y(x)=x.^1.11 .* (1-x).^1.09 + x;
-x=[0.88 0.46];
-q=0.54;
-r=refmin(y,x,q)
-```
 
 ### stages
 
@@ -190,6 +132,64 @@ q=0.54;
 r=refmin(y,x,q)
 R=1.70*r;
 N=stages(y,x,q,R)
+```
+
+### refmin
+
+refmin computes the minimum value of the reflux ratio
+of a distillation column, given
+a function y = y(x) that relates the liquid fraction x and the vapor fraction y, or
+a x-y matrix of the liquid and the vapor fractions,
+the vector of the fractions of the distillate and the feed, and
+the feed quality.
+
+If feed is a saturated liquid, feed quality q = 1,
+feed quality is reset to q = 1 - 1e-10.
+
+**Syntax:**
+
+```dotnetcli
+r=refmin(y,X,q)
+```
+
+**Examples:**
+
+Compute the minimum value of the reflux ratio
+of a distillation column, given
+a matrix that relates the liquid fraction and the vapor fraction,
+the composition of the column's bottom is 11 %,
+the composition of the distillate is 88 %, and
+the feed quality is 54 %:
+
+```julia
+data=[0.  0.;
+      0.1 0.212;
+      0.2 0.384;
+      0.3 0.529;
+      0.4 0.651;
+      0.5 0.752;
+      0.6 0.833;
+      0.7 0.895;
+      0.8 0.942;
+      0.9 0.974;
+      1.  1.];
+x=[0.88 0.46];
+q=0.54;
+r=refmin(data,x,q)
+```
+
+Compute the number of theoretical stages of a distillation column
+from the top of the column, given
+the function that compute the vapor fraction given the liquid fraction,
+the composition of the column's bottom is 11 %,
+the composition of the distillate is 88 %, and
+the feed quality is 54 %:
+
+```julia
+y(x)=x.^1.11 .* (1-x).^1.09 + x;
+x=[0.88 0.46];
+q=0.54;
+r=refmin(y,x,q)
 ```
 
 ### qR2S
