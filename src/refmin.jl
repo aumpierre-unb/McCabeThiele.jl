@@ -12,7 +12,7 @@ the vector of the fractions of the distillate and the feed, and
 the feed quality.
 
 If feed is a saturated liquid, feed quality q = 1,
-feed quality is reset to q = 1 - eps().
+feed quality is reset to q = 1 - 1e-10.
 
 See also: `stages`, `qR2S`.
 
@@ -58,7 +58,7 @@ r=refmin(f,x,q)
 """
 function refmin(data, X, q)
     if q == 1
-        q = 1 - eps()
+        q = 1 - 1e-10
     end
     if isa(data, Matrix)
         f(x) = interp1(data[:, 1], data[:, 2], x)

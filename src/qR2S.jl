@@ -7,7 +7,7 @@ the vector of the fractions of the products and the feed, and
 the feed quality.
 
 If feed is a saturated liquid, feed quality q = 1,
-feed quality is reset to q = 1 - eps().
+feed quality is reset to q = 1 - 1e-10.
 
 See also: `stages`, `refmin`.
 
@@ -29,7 +29,7 @@ S=qR2S(R,x,q)
 """
 function qR2S(R, X, q)
     if q == 1
-        q = 1 - eps()
+        q = 1 - 1e-10
     end
     xD = X(1)
     xF = X(2)

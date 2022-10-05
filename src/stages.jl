@@ -15,7 +15,7 @@ the feed quality, and
 the reflux ratio R at the top of the column.
 
 If feed is a saturated liquid, feed quality q = 1,
-feed quality is reset to q = 1 - eps().
+feed quality is reset to q = 1 - 1e-10.
 
 By default, theoretical stages are computed
 from the stripping section to the rectifying section, updown = true.
@@ -80,7 +80,7 @@ N=stages(f,x,q,R)
 """
 function stages(data, X, q, R, updown=true, fig=true)
     if q == 1
-        q = 1 - eps()
+        q = 1 - 1e-10
     end
     if isa(data, Matrix)
         f(x) = interp1(data[:, 1], data[:, 2], x)
