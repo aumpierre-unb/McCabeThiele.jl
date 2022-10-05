@@ -30,7 +30,7 @@ using McCabeThiele
 
 ### Pre-Release (Under Construction) Version
 
-The next (under construction) version of McCabeThiele
+The pre-release (under construction) version of McCabeThiele
 can be installed from the [maintainer's repository](https://github.com/aumpierre-unb/McCabeThiele.jl).
 
 ```julia
