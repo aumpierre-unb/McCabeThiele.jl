@@ -67,7 +67,7 @@ function refmin(data, X, q)
     end
     xD = X[1]
     xF = X[2]
-    foo(x) = y(x) - (q / (q - 1) * x - xF / (q - 1))
+    foo(x) = f(x) - (q / (q - 1) * x - xF / (q - 1))
     xi = bissection(foo, 0, 1)
     yi = q / (q - 1) * xi - xF / (q - 1)
     alpha = (xD - yi) / (xD - xi)
