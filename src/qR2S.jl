@@ -9,7 +9,7 @@ the feed quality.
 If feed is a saturated liquid, feed quality q = 1,
 feed quality is reset to q = 1 - eps().
 
-See also: stages, refmin.
+See also: `stages`, `refmin`.
 
 Examples
 ==========
