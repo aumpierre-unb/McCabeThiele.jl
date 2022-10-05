@@ -34,7 +34,7 @@ Examples
 Compute the number of theoretical stages of a distillation column
 from the bottom of the column, given
 a matrix that relates the liquid fraction and the vapor fraction,
-the composition of the column's bottom is 11 %,
+the composition of the column's bottom product is 11 %,
 the composition of the distillate is 88 %,
 the composition of the feed is 46 %,
 the feed quality is 54 %, and
@@ -62,10 +62,10 @@ N=stages(data,x,q,R,false,false)
 Compute the number of theoretical stages of a distillation column
 from the top of the column, given
 the function that compute the vapor fraction given the liquid fraction,
-the composition xB = 11 % of the column's bottom,
-the composition xD = 88 % of the distillate,
-the composition xF = 46 % of the feed,
-the feed quality q = 54 %, and
+the composition of the column's bottom product is 11 %,
+the composition of the distillate is 88 %,
+the composition of the feed is 46 %,
+the feed quality is 54 %, and
 the reflux ratio at the top of the column 70 % higher that the minimum reflux ratio,
 and plot a schematic diagram of the solution:
 
