@@ -49,10 +49,12 @@ function doplot(dots, updown, f, x, y, data, X, q, R)
         seriestype=:vline, color=:red,
         linestyle=:dash))
 
+    if q != 1 - 1e-10
     Y = q / (q - 1) .* X .- xF / (q - 1)
     display(plot!(X, Y,
         seriestype=:line, color=:magenta))
-
+    end
+    
     display(plot!([xF],
         seriestype=:vline, color=:magenta,
         linestyle=:dash))
