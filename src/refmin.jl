@@ -61,7 +61,7 @@ function refmin(data, X, q)
         q = 1 - 1e-10
     end
     if isa(data, Matrix)
-        y(x) = interp1(data[:, 1], data[:, 2], x)
+        f(x) = interp1(data[:, 1], data[:, 2], x)
     else
         f = data
     end

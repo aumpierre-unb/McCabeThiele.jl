@@ -83,7 +83,7 @@ function stages(data, X, q, R, updown=true, fig=true)
         q = 1 - 1e-10
     end
     if isa(data, Matrix)
-        y(x) = interp1(data[:, 1], data[:, 2], x)
+        f(x) = interp1(data[:, 1], data[:, 2], x)
         dots = true
     else
         f = data
