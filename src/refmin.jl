@@ -2,11 +2,11 @@ include("bissection.jl")
 include("interp1.jl")
 
 @doc raw"""
-`r=refmin(f,X,q)`
+`r=refmin(y,X,q)`
 
 `refmin` computes the minimum value of the reflux ratio
 of a distillation column, given
-a function y = f(x) that relates the liquid fraction x and the vapor fraction y, or
+a function y = y(x) that relates the liquid fraction x and the vapor fraction y, or
 a x-y matrix of the liquid and the vapor fractions,
 the vector of the fractions of the distillate and the feed, and
 the feed quality.
@@ -50,10 +50,10 @@ the composition of the distillate is 88 %, and
 the feed quality is 54 %:
 
 ```
-f(x)=x.^1.11 .* (1-x).^1.09 + x;
+y(x)=x.^1.11 .* (1-x).^1.09 + x;
 x=[0.88 0.46];
 q=0.54;
-r=refmin(f,x,q)
+r=refmin(y,x,q)
 ```
 """
 function refmin(data, X, q)
@@ -61,13 +61,13 @@ function refmin(data, X, q)
         q = 1 - 1e-10
     end
     if isa(data, Matrix)
-        f(x) = interp1(data[:, 1], data[:, 2], x)
+        y(x) = interp1(data[:, 1], data[:, 2], x)
     else
         f = data
     end
     xD = X[1]
     xF = X[2]
-    foo(x) = f(x) - (q / (q - 1) * x - xF / (q - 1))
+    foo(x) = y(x) - (q / (q - 1) * x - xF / (q - 1))
     xi = bissection(foo, 0, 1)
     yi = q / (q - 1) * xi - xF / (q - 1)
     alpha = (xD - yi) / (xD - xi)
