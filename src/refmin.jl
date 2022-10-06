@@ -21,9 +21,9 @@ Examples
 Compute the minimum value of the reflux ratio
 of a distillation column, given
 a matrix that relates the liquid fraction and the vapor fraction,
-the composition of the column's bottom is 11 %,
-the composition of the distillate is 88 %, and
-the feed quality is 54 %:
+the composition of the distillate is 88 %,
+the composition of the feed is 46 %,
+the composition of the column's bottom product is 11 %:
 
 ```
 data=[0.  0.;
@@ -42,17 +42,18 @@ q=0.54;
 r=refmin(data,x,q)
 ```
 
-Compute the number of theoretical stages of a distillation column
+Compute the minimum value of the reflux ratio
 from the top of the column, given
 the function that compute the vapor fraction given the liquid fraction,
-the composition of the column's bottom is 11 %,
-the composition of the distillate is 88 %, and
-the feed quality is 54 %:
+the composition of the distillate is 88 %,
+the composition of the feed is 46 %,
+the composition of the column's bottom product is 11 %,
+the feed is saturated liquid:
 
 ```
 y(x)=x.^1.11 .* (1-x).^1.09 + x;
 x=[0.88 0.46];
-q=0.54;
+q=1;
 r=refmin(y,x,q)
 ```
 """

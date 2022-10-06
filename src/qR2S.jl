@@ -1,10 +1,10 @@
 @doc raw"""
-`S=qR2S(R,X,q)`
+`S=qR2S(X,q,R)`
 
 `qR2S` computes the reflux ratio at the bottom of the column, given
-the reflux ratio at the top of the column,
-the vector of the fractions of the products and the feed, and
-the feed quality.
+the compositions of the feed and the products,
+the feed quality, and
+the reflux ratio at the top of the column.
 
 If feed is a saturated liquid, feed quality q = 1,
 feed quality is reset to q = 1 - 1e-10.
@@ -14,20 +14,39 @@ See also: `stages`, `refmin`.
 Examples
 ==========
 Compute the reflux ratio at the bottom of the column, given
-the reflux ratio at the top of the column is 2,
-the composition of the column's bottom is 11 %,
 the composition of the distillate is 88 %,
 the composition of the feed is 46 %,
-the feed quality is 54 %:
+the composition of the column's bottom product is 11 %,
+the feed quality is 54 %,
+the reflux ratio at the top of the column is 70 % higher
+than the minimum reflux ratio::
 
 ```
-R=2;
 x=[0.88 0.46 0.11];
 q=0.54;
-S=qR2S(R,x,q)
+r=refmin(data,x,q);
+R=1.70*r;
+S=qR2S(x,q,R)
 ```
+
+Compute the reflux ratio at the bottom of the column, given
+the composition of the distillate is 88 %,
+the composition of the feed is 46 %,
+the composition of the column's bottom product is 11 %,
+the feed is saturated liquid,
+the reflux ratio at the top of the column is 70 % higher
+than the minimum reflux ratio:
+
+```
+x=[0.88 0.46 0.11];
+q=1;
+r=refmin(data,x,q);
+R=1.70*r;
+S=qR2S(x,q,R)
+```
+
 """
-function qR2S(R, X, q)
+function qR2S(X, q, R)
     if q == 1
         q = 1 - 1e-10
     end

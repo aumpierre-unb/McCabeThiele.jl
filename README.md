@@ -60,9 +60,8 @@ McCabeThiele provides the following functions:
 
 stages computes the number of theoretical stages
 of a distillation column using the method of McCabe-Thiele, given
-a function y = y(x) that relates the liquid fraction x and the vapor fraction y, or
-a x-y matrix of the liquid and the vapor fractions,
-the vector of the fractions of the products and the feed,
+a function or a matrix of the liquid and the vapor fraction,
+the compositions of the feed and the products,
 the feed quality, and
 the reflux ratio at the top of the column.
 
@@ -94,7 +93,8 @@ the composition of the column's bottom product is 11 %,
 the composition of the distillate is 88 %,
 the composition of the feed is 46 %,
 the feed quality is 54 %, and
-the reflux ratio at the top of the column 70 % higher that the minimum reflux ratio:
+the reflux ratio at the top of the column is 70 % higher
+than the minimum reflux ratio:
 
 ```julia
 data=[0.  0.;
@@ -118,17 +118,18 @@ N=stages(data,x,q,R,false,false)
 Compute the number of theoretical stages of a distillation column
 from the top of the column, given
 the function that compute the vapor fraction given the liquid fraction,
-the composition of the column's bottom product is 11 %,
 the composition of the distillate is 88 %,
 the composition of the feed is 46 %,
-the feed quality is 54 %, and
-the reflux ratio at the top of the column 70 % higher that the minimum reflux ratio,
+the composition of the column's bottom product is 11 %,
+the feed is saturated liquid, and
+the reflux ratio at the top of the column is 70 % higher
+than the minimum reflux ratio,
 and plot a schematic diagram of the solution:
 
 ```julia
 y(x)=x.^1.11 .* (1-x).^1.09 + x;
 x=[0.88 0.46 0.11];
-q=0.54;
+q=1;
 r=refmin(y,x,q)
 R=1.70*r;
 N=stages(y,x,q,R)
@@ -137,10 +138,9 @@ N=stages(y,x,q,R)
 ### refmin
 
 refmin computes the minimum value of the reflux ratio
-of a distillation column, given
-a function y = y(x) that relates the liquid fraction x and the vapor fraction y, or
-a x-y matrix of the liquid and the vapor fractions,
-the vector of the fractions of the distillate and the feed, and
+of a distillation column using the method of McCabe-Thiele, given
+a function or a matrix of the liquid and the vapor fraction,
+the compositions of the feed and the distillate, and
 the feed quality.
 
 If feed is a saturated liquid, feed quality q = 1,
@@ -178,26 +178,27 @@ q=0.54;
 r=refmin(data,x,q)
 ```
 
-Compute the number of theoretical stages of a distillation column
+Compute the minimum value of the reflux ratio
 from the top of the column, given
 the function that compute the vapor fraction given the liquid fraction,
-the composition of the column's bottom is 11 %,
-the composition of the distillate is 88 %, and
-the feed quality is 54 %:
+the composition of the distillate is 88 %,
+the composition of the feed is 46 %,
+the composition of the column's bottom product is 11 %,
+the feed is saturated liquid:
 
 ```julia
 y(x)=x.^1.11 .* (1-x).^1.09 + x;
 x=[0.88 0.46];
-q=0.54;
+q=1;
 r=refmin(y,x,q)
 ```
 
 ### qR2S
 
 qR2S computes the reflux ratio at the bottom of the column, given
-the reflux ratio at the top of the column,
-the vector of the fractions of the products and the feed, and
-the feed quality.
+the compositions of the feed and the products,
+the feed quality, and
+the reflux ratio at the top of the column.
 
 If feed is a saturated liquid, feed quality q = 1,
 feed quality is reset to q = 1 - 1e-10.
@@ -205,23 +206,41 @@ feed quality is reset to q = 1 - 1e-10.
 **Syntax:**
 
 ```dotnetcli
-S=qR2S(R,X,q)
+S=qR2S(X,q,R)
 ```
 
 **Examples:**
 
 Compute the reflux ratio at the bottom of the column, given
-the reflux ratio at the top of the column is 2,
 the composition of the column's bottom is 11 %,
 the composition of the distillate is 88 %,
 the composition of the feed is 46 %,
-the feed quality is 54 %:
+the feed quality is 54 %,
+the reflux ratio at the top of the column is 70 % higher
+than the minimum reflux ratio:
 
 ```julia
-R=2;
+r=refmin(data,x,q);
+R=1.70*r;
 x=[0.88 0.46 0.11];
 q=0.54;
 S=qR2S(R,x,q)
+```
+
+Compute the reflux ratio at the bottom of the column, given
+the composition of the distillate is 88 %,
+the composition of the feed is 46 %,
+the composition of the column's bottom product is 11 %,
+the feed is saturated liquid,
+the reflux ratio at the top of the column is 70 % higher
+than the minimum reflux ratio:
+
+```julia
+x=[0.88 0.46 0.11];
+q=1;
+r=refmin(data,x,q)
+R=1.70*r;
+S=qR2S(x,q,R)
 ```
 
 Copyright &copy; 2022 Alexandre Umpierre

@@ -1,7 +1,9 @@
 ### TODO
 
 ### McCabeThiele 0.1.4-alpha (2022-10-06)
+* Included handling bad inputs
 * Minor changes on documentation
+* New input order of qR2S
 
 ### McCabeThiele 0.1.3 (2022-10-06)
 * Major changes on documentation and functions
