@@ -55,7 +55,7 @@ data=[0.  0.;
       1.  1.];
 x=[0.88 0.46 0.11];
 q=0.54;
-r=refmin(data,x,q)
+r=refmin(data,x,q);
 R=1.70*r;
 N=stages(data,x,q,R,false,false)
 ```
@@ -75,7 +75,7 @@ and plot a schematic diagram of the solution:
 y(x)=x.^1.11 .* (1-x).^1.09 + x;
 x=[0.88 0.46 0.11];
 q=1;
-r=refmin(y,x,q)
+r=refmin(y,x,q);
 R=1.70*r;
 N=stages(y,x,q,R)
 ```
