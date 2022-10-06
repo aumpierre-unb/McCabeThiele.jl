@@ -1,7 +1,7 @@
 Cite this version as
 Alexandre Umpierre. (2022).
 aumpierre-unb/McCabeThiele.jl: McCabe-Thiele v0.1.3 (v0.1.3).
-Zenodo. https://doi.org/10.5281/zenodo.7149944
+Zenodo. https://doi.org/10.5281/zenodo.7152999
 
 You can cite all versions (the concept), 
 including pre-released versions, by using the 
@@ -9,7 +9,7 @@ DOI 10.5281/zenodo.7126164.
 This DOI represents all versions, and will always resolve to the latest one.
 
 BibTeX Export
-@software{alexandre_umpierre_2022_7149944,
+@software{alexandre_umpierre_2022_7152999,
   author       = {Alexandre Umpierre},
   title        = {{aumpierre-unb/McCabeThiele.jl: McCabe-Thiele 
                    v0.1.3}},
@@ -17,6 +17,6 @@ BibTeX Export
   year         = 2022,
   publisher    = {Zenodo},
   version      = {v0.1.3},
-  doi          = {10.5281/zenodo.7149944},
-  url          = {https://doi.org/10.5281/zenodo.7149944}
+  doi          = {10.5281/zenodo.7152999},
+  url          = {https://doi.org/10.5281/zenodo.7152999}
 }
