@@ -57,6 +57,16 @@ r=refmin(y,x,q)
 ```
 """
 function refmin(data, X, q)
+    xD = X[1]
+    xF = X[2]
+    if xD<xF
+        println("Inconsistent feed and/or products compositions.")
+        return
+      end
+      if R<=refmin(data,X,q)
+        println("Minimum reflux ratio exceeded.")
+        return
+      end
     if q == 1
         q = 1 - 1e-10
     end
@@ -65,8 +75,6 @@ function refmin(data, X, q)
     else
         f = data
     end
-    xD = X[1]
-    xF = X[2]
     foo(x) = f(x) - (q / (q - 1) * x - xF / (q - 1))
     xi = bissection(foo, 0, 1)
     yi = q / (q - 1) * xi - xF / (q - 1)

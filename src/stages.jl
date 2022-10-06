@@ -83,7 +83,7 @@ function stages(data, X, q, R, updown=true, fig=true)
     xF = X[2]
     xB = X[3]
     if xD<xF || xB>xF
-        println("Inconsistent feed and products compositions.")
+        println("Inconsistent feed and/or products compositions.")
         return
       end
       if R<=refmin(data,X,q)
