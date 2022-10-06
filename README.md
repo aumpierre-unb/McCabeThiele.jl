@@ -211,11 +211,11 @@ S=qR2S(R,X,q)
 **Examples:**
 
 Compute the reflux ratio at the bottom of the column, given
-the reflux ratio R = 2 at the top of the column,
-the composition xB = 11 % of the column's bottom,
-the composition xD = 88 % of the distillate,
-the composition xF = 46 % of the feed, and
-the feed quality q = 54 %:
+the reflux ratio at the top of the column is 2,
+the composition of the column's bottom is 11 %,
+the composition of the distillate is 88 %,
+the composition of the feed is 46 %,
+the feed quality is 54 %:
 
 ```julia
 R=2;
