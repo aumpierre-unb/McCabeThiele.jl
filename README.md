@@ -127,7 +127,7 @@ than the minimum reflux ratio,
 and plot a schematic diagram of the solution:
 
 ```julia
-y(x)=x.^1.11 .* (1-x).^1.09 + x;
+y(x)=x.^0.9 .* (1-x).^1.2 + x;
 x=[0.88 0.46 0.11];
 q=1;
 r=refmin(y,x,q);
@@ -187,7 +187,7 @@ the composition of the column's bottom product is 11 %,
 the feed is saturated liquid:
 
 ```julia
-y(x)=x.^1.11 .* (1-x).^1.09 + x;
+y(x)=x.^0.9 .* (1-x).^1.2 + x;
 x=[0.88 0.46];
 q=1;
 r=refmin(y,x,q)
