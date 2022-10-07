@@ -216,14 +216,12 @@ the composition of the column's bottom is 11 %,
 the composition of the distillate is 88 %,
 the composition of the feed is 46 %,
 the feed quality is 54 %,
-the reflux ratio at the top of the column is 70 % higher
-than the minimum reflux ratio:
+the reflux ratio at the top of the column is 2:
 
 ```julia
 x=[0.88 0.46 0.11];
 q=0.54;
-r=refmin(data,x,q);
-R=1.70*r;
+R=2;
 S=qR2S(R,x,q)
 ```
 
@@ -232,14 +230,12 @@ the composition of the distillate is 88 %,
 the composition of the feed is 46 %,
 the composition of the column's bottom product is 11 %,
 the feed is saturated liquid,
-the reflux ratio at the top of the column is 70 % higher
-than the minimum reflux ratio:
+the reflux ratio at the top of the column is 2:
 
 ```julia
 x=[0.88 0.46 0.11];
 q=1;
-r=refmin(data,x,q);
-R=1.70*r;
+R=2;
 S=qR2S(x,q,R)
 ```
 
