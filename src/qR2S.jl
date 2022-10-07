@@ -47,12 +47,20 @@ S=qR2S(x,q,R)
 
 """
 function qR2S(X, q, R)
-    if q == 1
-        q = 1 - 1e-10
-    end
     xD = X[1]
     xF = X[2]
     xB = X[3]
+    if xD < xF || xB > xF
+        println("Inconsistent feed and/or products compositions.")
+        return
+    end
+    if q == 1
+        q = 1 - 1e-10
+    end
+    if R <= refmin(data, X, q)
+        println("Minimum reflux ratio exceeded.")
+        return
+    end
     xi = (xD / (R + 1) + xF / (q - 1)) / (q / (q - 1) - R / (R + 1))
     yi = q / (q - 1) * xi - xF / (q - 1)
     alpha = (yi - xB) / (xi - xB)

@@ -84,16 +84,16 @@ function stages(data, X, q, R, updown=true, fig=true)
     xD = X[1]
     xF = X[2]
     xB = X[3]
-    if xD<xF || xB>xF
+    if xD < xF || xB > xF
         println("Inconsistent feed and/or products compositions.")
         return
-      end
-      if R<=refmin(data,X,q)
-        println("Minimum reflux ratio exceeded.")
-        return
-      end
+    end
     if q == 1
         q = 1 - 1e-10
+    end
+    if R <= refmin(data, X, q)
+        println("Minimum reflux ratio exceeded.")
+        return
     end
     if isa(data, Matrix)
         f(x) = interp1(data[:, 1], data[:, 2], x)

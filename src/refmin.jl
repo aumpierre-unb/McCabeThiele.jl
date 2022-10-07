@@ -60,14 +60,10 @@ r=refmin(y,x,q)
 function refmin(data, X, q)
     xD = X[1]
     xF = X[2]
-    if xD<xF
+    if xD < xF
         println("Inconsistent feed and/or products compositions.")
         return
-      end
-      if R<=refmin(data,X,q)
-        println("Minimum reflux ratio exceeded.")
-        return
-      end
+    end
     if q == 1
         q = 1 - 1e-10
     end
