@@ -53,10 +53,6 @@ function qR2S(X, q, R)
     if q == 1
         q = 1 - 1e-10
     end
-    if R <= refmin(data, X, q)
-        println("Minimum reflux ratio exceeded.")
-        return
-    end
     xi = (xD / (R + 1) + xF / (q - 1)) / (q / (q - 1) - R / (R + 1))
     yi = q / (q - 1) * xi - xF / (q - 1)
     alpha = (yi - xB) / (xi - xB)
