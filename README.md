@@ -46,7 +46,7 @@ You can cite all versions (both released and pre-released), by using
 
 This DOI represents all versions, and will always resolve to the latest one.
 
-For citation of the last released version of InternalFluidFlow, please check CITATION file at the [maintainer's repository](https://github.com/aumpierre-unb/McCabeThiele.jl).
+For citation of the last released version of McCabeThiele, please check CITATION file at the [maintainer's repository](https://github.com/aumpierre-unb/McCabeThiele.jl).
 
 ## The McCabeThiele Module for Julia
 
