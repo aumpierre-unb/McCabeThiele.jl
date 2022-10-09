@@ -7,7 +7,7 @@ using the method of McCabe-Thiele.
 All function offer the option of plotting the solution 
 on a schematic Moody diagram. Check the functions' syntaxes at Julia's help.
 
-See also: `stages`, `refmin`.
+See also: `stages`, `refmin`, `qR2S`.
 """
 module McCabeThiele
 
