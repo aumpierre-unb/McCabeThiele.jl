@@ -4,9 +4,9 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![version](https://juliahub.com/docs/McCabeThiele/version.svg)](https://juliahub.com/ui/Packages/McCabeThiele/WauTj)
 
-![Illustrative plot](https://github.com/aumpierre-unb/McCabeThiele.jl/blob/main/pics/downup_matrix.svg "Example of result")
+![Illustrative graphical output](https://github.com/aumpierre-unb/McCabeThiele.jl/blob/main/pics/downup_matrix.svg "Example of graphical output")
 
-![Illustrative plot](https://github.com/aumpierre-unb/McCabeThiele.jl/blob/main/pics/updown_satliq.svg "Example of result")
+![Illustrative graphical output](https://github.com/aumpierre-unb/McCabeThiele.jl/blob/main/pics/updown_satliq.svg "Example of graphical output")
 
 ## Installing and Loading McCabeThiele
 
