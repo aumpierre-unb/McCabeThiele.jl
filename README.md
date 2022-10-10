@@ -8,8 +8,8 @@
 
 ![Illustrative plot](https://github.com/aumpierre-unb/McCabeThiele.jl/blob/main/pics/updown_satliq.svg "Example of result") -->
 
-<img src="https://github.com/aumpierre-unb/McCabeThiele.jl/blob/main/pics/downup_matrix.svg" width="400",align="middle">
-<img src="https://github.com/aumpierre-unb/McCabeThiele.jl/blob/main/pics/updown_satliq.svg" width="400",align="middle">
+<img src="https://github.com/aumpierre-unb/McCabeThiele.jl/blob/main/pics/downup_matrix.svg" width="400" class="center">
+<img src="https://github.com/aumpierre-unb/McCabeThiele.jl/blob/main/pics/updown_satliq.svg" width="400" class="center">
 
 ## Installing and Loading McCabeThiele
 
