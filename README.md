@@ -4,9 +4,9 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![version](https://juliahub.com/docs/McCabeThiele/version.svg)](https://juliahub.com/ui/Packages/McCabeThiele/WauTj)
 
-![Illustrative graphical output](https://github.com/aumpierre-unb/McCabeThiele.jl/blob/main/pics/downup_matrix.svg "Example of graphical output - from x-y data set")
+![Illustrative graphical output](https://github.com/aumpierre-unb/McCabeThiele.jl/blob/main/pics/downup_matrix.svg "Example of graphical output - from x-y data set, stages from bottom to top")
 
-![Illustrative graphical output](https://github.com/aumpierre-unb/McCabeThiele.jl/blob/main/pics/updown_satliq.svg "Example of graphical output - from y=f(x) function and saturated liquid feed")
+![Illustrative graphical output](https://github.com/aumpierre-unb/McCabeThiele.jl/blob/main/pics/updown_satliq.svg "Example of graphical output - from y=f(x) function and saturated liquid feed, stages from top to bottom")
 
 ## Installing and Loading McCabeThiele
 
