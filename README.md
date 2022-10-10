@@ -6,7 +6,7 @@
 
 ![Illustrative graphical output](https://github.com/aumpierre-unb/McCabeThiele.jl/blob/main/pics/downup_matrix.svg "Example of graphical output - from x-y data set")
 
-![Illustrative graphical output](https://github.com/aumpierre-unb/McCabeThiele.jl/blob/main/pics/updown_satliq.svg "Example of graphical output - from y=f(x) function with saturated liquid feed")
+![Illustrative graphical output](https://github.com/aumpierre-unb/McCabeThiele.jl/blob/main/pics/updown_satliq.svg "Example of graphical output - from y=f(x) function and saturated liquid feed")
 
 ## Installing and Loading McCabeThiele
 
