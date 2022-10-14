@@ -1,7 +1,7 @@
 @doc raw"""
 `S=qR2S(X,q,R)`
 
-`qR2S` computes the reflux ratio at the bottom of the column, given
+`qR2S` computes the reflux ratio at the bottom of the column given
 the compositions of the feed and the products,
 the feed quality, and
 the reflux ratio at the top of the column.
@@ -13,7 +13,7 @@ See also: `stages`, `refmin`.
 
 Examples
 ==========
-Compute the reflux ratio at the bottom of the column, given
+Compute the reflux ratio at the bottom of the column given
 the composition of the distillate is 88 %,
 the composition of the feed is 46 %,
 the composition of the column's bottom product is 11 %,
@@ -27,7 +27,7 @@ R=2;
 S=qR2S(x,q,R)
 ```
 
-Compute the reflux ratio at the bottom of the column, given
+Compute the reflux ratio at the bottom of the column given
 the composition of the distillate is 88 %,
 the composition of the feed is 46 %,
 the composition of the column's bottom product is 11 %,

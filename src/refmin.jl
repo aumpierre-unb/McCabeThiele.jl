@@ -5,7 +5,7 @@ include("interp1.jl")
 `r=refmin(y,X,q)`
 
 `refmin` computes the minimum value of the reflux ratio
-of a distillation column, given
+of a distillation column given
 a function y = y(x) that relates the liquid fraction x and the vapor fraction y, or
 a x-y matrix of the liquid and the vapor fractions,
 the vector of the fractions of the distillate and the feed, and
@@ -19,7 +19,7 @@ See also: `stages`, `qR2S`.
 Examples
 ==========
 Compute the minimum value of the reflux ratio
-of a distillation column, given
+of a distillation column given
 a matrix that relates the liquid fraction and the vapor fraction,
 the composition of the distillate is 88 %,
 the composition of the feed is 46 %,
@@ -43,7 +43,7 @@ r=refmin(data,x,q)
 ```
 
 Compute the minimum value of the reflux ratio
-from the top of the column, given
+of a distillation column given
 the function that compute the vapor fraction given the liquid fraction,
 the composition of the distillate is 88 %,
 the composition of the feed is 46 %,
