@@ -7,7 +7,8 @@ include("doplots.jl")
 `N=stages(y,X,q,R[,updown[,fig]])`
 
 `stages` computes the number of theoretical stages
-of a distillation column using the method of McCabe-Thiele given
+of a distillation column
+using the method of McCabe-Thiele given
 a function y = y(x) that relates the liquid fraction x and the vapor fraction y, or
 a x-y matrix of the liquid and the vapor fractions,
 the vector of the fractions of the products and the feed,
