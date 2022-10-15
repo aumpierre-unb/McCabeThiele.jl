@@ -63,7 +63,7 @@ McCabeThiele provides the following functions:
 ### stages
 
 stages computes the number of theoretical stages
-of a distillation column using the method of McCabe-Thiele, given
+of a distillation column using the McCabe-Thiele method, given
 a function or a matrix of the liquid and the vapor fraction,
 the compositions of the feed and the products,
 the feed quality, and
@@ -142,7 +142,7 @@ N=stages(y,x,q,R)
 ### refmin
 
 refmin computes the minimum value of the reflux ratio
-of a distillation column using the method of McCabe-Thiele, given
+of a distillation column using the McCabe-Thiele method, given
 a function or a matrix of the liquid and the vapor fraction,
 the compositions of the feed and the distillate, and
 the feed quality.

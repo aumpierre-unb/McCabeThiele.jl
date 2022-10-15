@@ -6,7 +6,7 @@ include("interp1.jl")
 
 `refmin` computes the minimum value of the reflux ratio
 of a distillation column
-using the method of McCabe-Thiele given
+using the McCabe-Thiele method given
 a function y = y(x) that relates the liquid fraction x and the vapor fraction y, or
 a x-y matrix of the liquid and the vapor fractions,
 the vector of the fractions of the distillate and the feed, and

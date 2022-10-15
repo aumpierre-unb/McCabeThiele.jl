@@ -3,7 +3,7 @@
 
 `qR2S` computes the reflux ratio at the bottom
 of a distillation column
-using the method of McCabe-Thiele given
+using the McCabe-Thiele method given
 the compositions of the products and the feed,
 the feed quality, and
 the reflux ratio at the top of the column.
