@@ -19,7 +19,7 @@ function doplot(dots, updown, f, x, y, data, X, q, R)
         X = data[:, 1]
         Y = data[:, 2]
         display(plot!(X, Y,
-            seriestype=:line, color=:black, markershape=:circle))
+            seriestype=:line, color=:black, markershape=:circle, markersize=2))
     else
         X = collect(range(0, 1, length=101))
         Y = f.(X)
@@ -50,11 +50,12 @@ function doplot(dots, updown, f, x, y, data, X, q, R)
         linestyle=:dash))
 
     if q != 1 - 1e-10
-    Y = q / (q - 1) .* X .- xF / (q - 1)
-    display(plot!(X, Y,
-        seriestype=:line, color=:magenta))
+        Y = q / (q - 1) .* X .- xF / (q - 1)
+        display(plot!(X, Y,
+            seriestype=:line, color=:magenta,
+            linestyle=:dash))
     end
-    
+
     display(plot!([xF],
         seriestype=:vline, color=:magenta,
         linestyle=:dash))

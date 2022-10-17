@@ -55,7 +55,7 @@ data=[0.  0.;
       0.9 0.974;
       1.  1.];
 x=[0.88 0.46 0.11];
-q=0.54;
+q=0.56;
 r=refmin(data,x,q);
 R=1.70*r;
 N=stages(data,x,q,R,false,false)

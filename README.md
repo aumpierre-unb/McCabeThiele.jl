@@ -1,62 +1,62 @@
-# McCabeThiele.jl
+# PonchonSavarit.jl.jl
 
 [![DOI](https://zenodo.org/badge/543161141.svg)](https://doi.org/10.5281/zenodo.7126164)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![version](https://juliahub.com/docs/McCabeThiele/version.svg)](https://juliahub.com/ui/Packages/McCabeThiele/WauTj)
+[![version](https://juliahub.com/docs/PonchonSavarit.jl/version.svg)](https://juliahub.com/ui/Packages/PonchonSavarit.jl/WauTj)
 
 <!--
-![Illustrative graphical output](https://github.com/aumpierre-unb/McCabeThiele.jl/blob/main/pics/downup_matrix.svg "Example of graphical output - from x-y data set, stages from bottom to top")
+![Illustrative graphical output](https://github.com/aumpierre-unb/PonchonSavarit.jl.jl/blob/main/pics/downup_matrix.svg "Example of graphical output - from x-y data set, stages from bottom to top")
 
-![Illustrative graphical output](https://github.com/aumpierre-unb/McCabeThiele.jl/blob/main/pics/updown_satliq.svg "Example of graphical output - from y=f(x) function and saturated liquid feed, stages from top to bottom")
+![Illustrative graphical output](https://github.com/aumpierre-unb/PonchonSavarit.jl.jl/blob/main/pics/updown_satliq.svg "Example of graphical output - from y=f(x) function and saturated liquid feed, stages from top to bottom")
 -->
 
-## Installing and Loading McCabeThiele
+## Installing and Loading PonchonSavarit.jl
 
-McCabeThiele can be installed and loaded either
+PonchonSavarit.jl can be installed and loaded either
 from the JuliaHub repository (last released version) or from the
-[maintainer's repository](https://github.com/aumpierre-unb/McCabeThiele.jl).
+[maintainer's repository](https://github.com/aumpierre-unb/PonchonSavarit.jl.jl).
 
 ### Last Released Version
 
-The last version of McCabeThiele can be installed from JuliaHub repository:
+The last version of PonchonSavarit.jl can be installed from JuliaHub repository:
 
 ```julia
 using Pkg
-Pkg.add("McCabeThiele")
-using McCabeThiele
+Pkg.add("PonchonSavarit.jl")
+using PonchonSavarit.jl
 ```
 
-If McCabeThiele is already installed, it can be updated:
+If PonchonSavarit.jl is already installed, it can be updated:
 
 ```julia
 using Pkg
-Pkg.update("McCabeThiele")
-using McCabeThiele
+Pkg.update("PonchonSavarit.jl")
+using PonchonSavarit.jl
 ```
 
 ### Pre-Release (Under Construction) Version
 
-The pre-release (under construction) version of McCabeThiele
-can be installed from the [maintainer's repository](https://github.com/aumpierre-unb/McCabeThiele.jl).
+The pre-release (under construction) version of PonchonSavarit.jl
+can be installed from the [maintainer's repository](https://github.com/aumpierre-unb/PonchonSavarit.jl.jl).
 
 ```julia
 using Pkg
-Pkg.add(path="https://github.com/aumpierre-unb/McCabeThiele.jl")
-using McCabeThiele
+Pkg.add(path="https://github.com/aumpierre-unb/PonchonSavarit.jl.jl")
+using PonchonSavarit.jl
 ```
 
-## Citation of McCabeThiele
+## Citation of PonchonSavarit.jl
 
 You can cite all versions (both released and pre-released), by using
 [10.5281/zenodo.7126164](https://doi.org/10.5281/zenodo.7126164).
 
 This DOI represents all versions, and will always resolve to the latest one.
 
-For citation of the last released version of McCabeThiele, please check CITATION file at the [maintainer's repository](https://github.com/aumpierre-unb/McCabeThiele.jl).
+For citation of the last released version of PonchonSavarit.jl, please check CITATION file at the [maintainer's repository](https://github.com/aumpierre-unb/PonchonSavarit.jl.jl).
 
-## The McCabeThiele Module for Julia
+## The PonchonSavarit.jl Module for Julia
 
-McCabeThiele provides the following functions:
+PonchonSavarit.jl provides the following functions:
 
 - stages
 - refmin
@@ -244,6 +244,15 @@ q=1;
 R=2;
 S=qR2S(x,q,R)
 ```
+
+<!--
+### See Also
+
+[PonchonSavarit.jl.jl](https://github.com/aumpierre-unb/PonchonSavarit.jl.jl),
+[InternalFluidFlow.jl](https://github.com/aumpierre-unb/InternalFluidFlow.jl).
+-->
+
+Copyright &copy; 2022 Alexandre Umpierre
 
 Copyright &copy; 2022 Alexandre Umpierre
 

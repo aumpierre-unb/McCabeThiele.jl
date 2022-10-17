@@ -2,10 +2,7 @@
 
 `McCabeThiele` provides a set of functions to compute 
 the number of theoretical stages of distillatiob columns 
-using the method of McCabe-Thiele.
-
-All function offer the option of plotting the solution 
-on a schematic Moody diagram. Check the functions' syntaxes at Julia's help.
+using the McCabe-Thiele method.
 
 See also: `stages`, `refmin`, `qR2S`.
 """
