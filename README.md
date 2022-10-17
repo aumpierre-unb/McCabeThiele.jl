@@ -239,12 +239,10 @@ R=2;
 S=qR2S(x,q,R)
 ```
 
-<!--
 ### See Also
 
 [PonchonSavarit.jl](https://github.com/aumpierre-unb/PonchonSavarit.jl),
 [InternalFluidFlow.jl](https://github.com/aumpierre-unb/InternalFluidFlow.jl).
--->
 
 Copyright &copy; 2022 Alexandre Umpierre
 
