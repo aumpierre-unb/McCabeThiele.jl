@@ -1,7 +1,7 @@
-include("stages_updown.jl")
-include("stages_downup.jl")
-include("interp1.jl")
-include("doplots.jl")
+include("McCabeThiele.stages_updown.jl")
+include("McCabeThiele.stages_downup.jl")
+include("McCabeThiele.interp1.jl")
+include("McCabeThiele.doplots.jl")
 
 @doc raw"""
 `N=stages(y,X,q,R[,updown[,fig]])`
@@ -56,9 +56,9 @@ data=[0.  0.;
       1.  1.];
 x=[0.88 0.46 0.11];
 q=0.56;
-r=refmin(data,x,q);
+r=McCabeThiele.refmin(data,x,q);
 R=1.70*r;
-N=stages(data,x,q,R,false,false)
+N=McCabeThiele.stages(data,x,q,R,false,false)
 ```
 
 Compute the number of theoretical stages of a distillation column
@@ -76,9 +76,9 @@ and plot a schematic diagram of the solution:
 y(x)=x.^0.9 .* (1-x).^1.2 + x;
 x=[0.88 0.46 0.11];
 q=1;
-r=refmin(y,x,q);
+r=McCabeThiele.refmin(y,x,q);
 R=1.70*r;
-N=stages(y,x,q,R)
+N=McCabeThiele.stages(y,x,q,R)
 ```
 """
 function stages(data, X, q, R, updown=true, fig=true)
@@ -97,7 +97,7 @@ function stages(data, X, q, R, updown=true, fig=true)
         return
     end
     if isa(data, Matrix)
-        f(x) = interp1(data[:, 1], data[:, 2], x)
+        f(x) = McCabeThiele.interp1(data[:, 1], data[:, 2], x)
         dots = true
     else
         f = data
@@ -107,12 +107,12 @@ function stages(data, X, q, R, updown=true, fig=true)
     yi = q / (q - 1) * xi - xF / (q - 1)
     X = [xD xF xB xi yi]
     if updown
-        N, x, y = stages_updown(f, X, R)
+        N, x, y = McCabeThiele.stages_updown(f, X, R)
     else
-        N, x, y = stages_downup(f, X, R)
+        N, x, y = McCabeThiele.stages_downup(f, X, R)
     end
     if fig
-        doplot(dots, updown, f, x, y, data, X, q, R)
+        McCabeThiele.doplot(dots, updown, f, x, y, data, X, q, R)
     end
     return N
 end

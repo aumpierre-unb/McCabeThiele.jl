@@ -1,5 +1,5 @@
-include("bissection.jl")
-include("interp1.jl")
+include("McCabeThiele.bissection.jl")
+include("McCabeThiele.interp1.jl")
 
 @doc raw"""
 `r=refmin(y,X,q)`
@@ -40,7 +40,7 @@ data=[0.  0.;
       1.  1.];
 x=[0.88 0.46];
 q=0.56;
-r=refmin(data,x,q)
+r=McCabeThiele.refmin(data,x,q)
 ```
 
 Compute the minimum value of the reflux ratio
@@ -55,7 +55,7 @@ the feed is saturated liquid:
 y(x)=x.^0.9 .* (1-x).^1.2 + x;
 x=[0.88 0.46];
 q=1;
-r=refmin(y,x,q)
+r=McCabeThiele.refmin(y,x,q)
 ```
 """
 function refmin(data, X, q)
@@ -69,12 +69,12 @@ function refmin(data, X, q)
         q = 1 - 1e-10
     end
     if isa(data, Matrix)
-        f(x) = interp1(data[:, 1], data[:, 2], x)
+        f(x) = McCabeThiele.interp1(data[:, 1], data[:, 2], x)
     else
         f = data
     end
     foo(x) = f(x) - (q / (q - 1) * x - xF / (q - 1))
-    xi = bissection(foo, 0., 1.)
+    xi = McCabeThiele.bissection(foo, 0., 1.)
     yi = q / (q - 1) * xi - xF / (q - 1)
     alpha = (xD - yi) / (xD - xi)
     return alpha / (1 - alpha)
