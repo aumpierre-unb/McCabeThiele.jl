@@ -19,7 +19,7 @@ function doplot(dots, updown, f, x, y, data, X, q, R)
         X = data[:, 1]
         Y = data[:, 2]
         display(plot!(X, Y,
-            seriestype=:line, color=:black, markershape=:circle, markersize=2))
+            seriestype=:line, color=:black, markershape=:circle, markersize=3))
     else
         X = collect(range(0, 1, length=101))
         Y = f.(X)
