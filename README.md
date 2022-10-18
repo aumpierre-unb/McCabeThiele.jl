@@ -36,8 +36,7 @@ can be installed from the [maintainer's repository](https://github.com/aumpierre
 ```julia
 using Pkg
 Pkg.add(path="https://github.com/aumpierre-unb/McCabeThiele.jl")
-using McCabeThiele
-```
+using McCabeThiel```
 
 ## Citation of McCabeThiele
 
