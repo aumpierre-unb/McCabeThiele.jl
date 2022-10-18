@@ -26,7 +26,7 @@ the reflux ratio at the top of the column is 2:
 x=[0.88 0.46 0.11];
 q=0.56;
 R=2;
-S=McCabeThiele.qR2S(x,q,R)
+S=qR2S(x,q,R)
 ```
 
 Compute the reflux ratio at the bottom of the column given
@@ -40,7 +40,7 @@ the reflux ratio at the top of the column is 2:
 x=[0.88 0.46 0.11];
 q=1;
 R=2;
-S=McCabeThiele.qR2S(x,q,R)
+S=qR2S(x,q,R)
 ```
 """
 function qR2S(X, q, R)
