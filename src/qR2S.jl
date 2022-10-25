@@ -11,6 +11,9 @@ the reflux ratio at the top of the column.
 If feed is a saturated liquid, feed quality q = 1,
 feed quality is reset to q = 1 - 1e-10.
 
+`qR2S` is a main function of
+the `McCabeThiele` toolbox for Julia.
+
 See also: `stages`, `refmin`.
 
 Examples

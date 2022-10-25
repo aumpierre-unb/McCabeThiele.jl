@@ -15,6 +15,9 @@ the feed quality.
 If feed is a saturated liquid, feed quality q = 1,
 feed quality is reset to q = 1 - 1e-10.
 
+`refmin` is a main function of
+the `McCabeThiele` toolbox for Julia.
+
 See also: `stages`, `qR2S`.
 
 Examples

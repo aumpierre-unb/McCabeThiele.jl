@@ -28,6 +28,9 @@ By default, `stages` plots a schematic diagram of the solution, fig = true.
 
 If fig = false is given, no plot is shown.
 
+`stages` is a main function of
+the `McCabeThiele` toolbox for Julia.
+
 See also: `refmin`, `qR2S`.
 
 Examples

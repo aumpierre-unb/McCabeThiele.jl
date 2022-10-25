@@ -1,3 +1,11 @@
+@doc raw"""
+`bissection` computes computes the root of
+a function using the method of bissection
+given it is found between the guess values.
+
+`bissection` is an auxiliary function of
+the `McCabeThiele` toolbox for Julia.
+"""
 function bissection(f, x1, x2)
     while abs(f(x2)) > 1e-4
         x = (x1 + x2) / 2

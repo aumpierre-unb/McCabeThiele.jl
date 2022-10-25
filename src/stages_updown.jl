@@ -1,5 +1,15 @@
 include("bissection.jl")
 
+@doc raw"""
+`stages_updown` scomputes the number of
+theoretical stages of equilibrium of
+a distillation column using the
+McCabe-Thiele method, strating from
+the bottom to the top of the column.
+
+`stages_updown` is an auxiliary function of
+the `McCabeThiele` toolbox for Julia.
+"""
 function stages_updown(f, X, R)
     xD = X[1]
     xF = X[2]

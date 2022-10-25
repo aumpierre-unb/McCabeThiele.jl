@@ -1,7 +1,7 @@
 @doc raw"""
 
 `McCabeThiele` provides a set of functions to compute 
-the number of theoretical stages of distillatiob columns 
+the number of theoretical stages of a distillation column 
 using the McCabe-Thiele method.
 
 See also: `stages`, `refmin`, `qR2S`.
