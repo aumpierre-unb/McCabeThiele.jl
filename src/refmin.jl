@@ -27,7 +27,7 @@ of a distillation column given
 a matrix that relates the liquid fraction and the vapor fraction,
 the composition of the distillate is 88 %,
 the composition of the feed is 46 %,
-the composition of the column's bottom product is 11 %:
+the composition of the column's bottom product is 11 %.
 
 ```
 data=[0.  0.;
@@ -52,7 +52,7 @@ the function that compute the vapor fraction given the liquid fraction,
 the composition of the distillate is 88 %,
 the composition of the feed is 46 %,
 the composition of the column's bottom product is 11 %,
-the feed is saturated liquid:
+the feed is saturated liquid.
 
 ```
 y(x)=x.^0.9 .* (1-x).^1.2 + x;

@@ -23,7 +23,7 @@ the composition of the distillate is 88 %,
 the composition of the feed is 46 %,
 the composition of the column's bottom product is 11 %,
 the feed quality is 54 %,
-the reflux ratio at the top of the column is 2:
+the reflux ratio at the top of the column is 2.
 
 ```
 x=[0.88 0.46 0.11];
@@ -37,7 +37,7 @@ the composition of the distillate is 88 %,
 the composition of the feed is 46 %,
 the composition of the column's bottom product is 11 %,
 the feed is saturated liquid,
-the reflux ratio at the top of the column is 2:
+the reflux ratio at the top of the column is 2.
 
 ```
 x=[0.88 0.46 0.11];

@@ -43,7 +43,7 @@ the composition of the feed is 46 %,
 the composition of the column's bottom product is 11 %,
 the feed quality is 54 %, and
 the reflux ratio at the top of the column is 70 % higher
-than the minimum reflux ratio:
+than the minimum reflux ratio.
 
 ```
 data=[0.  0.;
@@ -73,7 +73,7 @@ the composition of the column's bottom product is 11 %,
 the feed is saturated liquid, and
 the reflux ratio at the top of the column is 70 % higher
 than the minimum reflux ratio,
-and plot a schematic diagram of the solution:
+and plot a schematic diagram of the solution.
 
 ```
 y(x)=x.^0.9 .* (1-x).^1.2 + x;

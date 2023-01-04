@@ -93,7 +93,7 @@ the composition of the distillate is 88 %,
 the composition of the feed is 46 %,
 the feed quality is 54 %, and
 the reflux ratio at the top of the column is 70 % higher
-than the minimum reflux ratio:
+than the minimum reflux ratio.
 
 ```julia
 data=[0.  0.;
@@ -123,7 +123,7 @@ the composition of the column's bottom product is 11 %,
 the feed is saturated liquid, and
 the reflux ratio at the top of the column is 70 % higher
 than the minimum reflux ratio,
-and plot a schematic diagram of the solution:
+and plot a schematic diagram of the solution.
 
 ```julia
 y(x)=x.^0.9 .* (1-x).^1.2 + x;
@@ -158,7 +158,7 @@ of a distillation column, given
 a matrix that relates the liquid fraction and the vapor fraction,
 the composition of the column's bottom is 11 %,
 the composition of the distillate is 88 %, and
-the feed quality is 54 %:
+the feed quality is 54 %.
 
 ```julia
 data=[0.  0.;
@@ -183,7 +183,7 @@ the function that compute the vapor fraction given the liquid fraction,
 the composition of the distillate is 88 %,
 the composition of the feed is 46 %,
 the composition of the column's bottom product is 11 %,
-the feed is saturated liquid:
+the feed is saturated liquid.
 
 ```julia
 y(x)=x.^0.9 .* (1-x).^1.2 + x;
@@ -215,7 +215,7 @@ the composition of the column's bottom is 11 %,
 the composition of the distillate is 88 %,
 the composition of the feed is 46 %,
 the feed quality is 54 %,
-the reflux ratio at the top of the column is 2:
+the reflux ratio at the top of the column is 2.
 
 ```julia
 x=[0.88 0.46 0.11];
@@ -229,7 +229,7 @@ the composition of the distillate is 88 %,
 the composition of the feed is 46 %,
 the composition of the column's bottom product is 11 %,
 the feed is saturated liquid,
-the reflux ratio at the top of the column is 2:
+the reflux ratio at the top of the column is 2.
 
 ```julia
 x=[0.88 0.46 0.11];
