@@ -241,6 +241,7 @@ S=qR2S(x,q,R)
 ### See Also
 
 [PonchonSavarit.jl](https://github.com/aumpierre-unb/PonchonSavarit.jl),
+[Psychrometrics.jl](https://github.com/aumpierre-unb/Psychrometrics.jl),
 [InternalFluidFlow.jl](https://github.com/aumpierre-unb/InternalFluidFlow.jl).
 
 Copyright &copy; 2022 Alexandre Umpierre
