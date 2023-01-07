@@ -48,7 +48,8 @@ function doplot(dots, updown, f, x, y, data, X, q, R)
     Y = R / (1 + R) .* X .+ xD / (1 + R)
     plot!(X, Y,
         seriestype=:line,
-        color=:blue)
+        color=:blue,
+        linestyle=:dashdot)
     plot!([xD],
         seriestype=:vline,
         color=:blue,
@@ -56,7 +57,8 @@ function doplot(dots, updown, f, x, y, data, X, q, R)
     Y = (xB - yi) / (xB - xi) .* (X .- xi) .+ yi
     plot!(X, Y,
         seriestype=:line,
-        color=:red)
+        color=:red,
+        linestyle=:dashdot)
     plot!([xB],
         seriestype=:vline,
         color=:red,
@@ -66,7 +68,7 @@ function doplot(dots, updown, f, x, y, data, X, q, R)
         plot!(X, Y,
             seriestype=:line,
             color=:magenta,
-            linestyle=:dash)
+            linestyle=:dashdot)
     end
     plot!([xF],
         seriestype=:vline,
