@@ -1,7 +1,7 @@
 name = "McCabeThiele"
 uuid = "9f146e92-7042-481a-8b41-8d9bb9ade538"
 authors = ["Alexandre Umpierre <aumpierre@gmail.com>"]
-version = "0.1.7-alpha"
+version = "0.1.7"
 
 [deps]
 Plots = "91a5bcdd-55d7-5caf-9e0b-520d859cae80"

@@ -1,7 +1,7 @@
 @doc raw"""
 `interp1` computes the interpolation of a number.
 
-`interp1` is an auxiliary function of
+`interp1` is an internal function of
 the `McCabeThiele` toolbox for Julia.
 """
 function interp1(X, Y, x)

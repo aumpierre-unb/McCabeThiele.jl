@@ -6,7 +6,7 @@ a representation of the theoretical stages of equilibrium
 computed for a distillation column using the
 McCabe-Thiele method.
 
-`doplot` is an auxiliary function of
+`doplot` is an internal function of
 the `McCabeThiele` toolbox for Julia.
 """
 function doplot(dots, updown, f, x, y, data, X, q, R)

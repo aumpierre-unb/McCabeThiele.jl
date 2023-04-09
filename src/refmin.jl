@@ -27,7 +27,7 @@ of a distillation column given
 a matrix that relates the liquid fraction and the vapor fraction,
 the composition of the distillate is 88 %,
 the composition of the feed is 46 %,
-the composition of the column's bottom product is 11 %.
+the composition of the column's bottom product is 11 %:
 
 ```
 data=[0.  0.;

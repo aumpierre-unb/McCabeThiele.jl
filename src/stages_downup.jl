@@ -5,7 +5,7 @@ a distillation column using the
 McCabe-Thiele method, strating from
 the bottom to the top of the column.
 
-`stages_downup` is an auxiliary function of
+`stages_downup` is an internal function of
 the `McCabeThiele` toolbox for Julia.
 """
 function stages_downup(f, X, R)

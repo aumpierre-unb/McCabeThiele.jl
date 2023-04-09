@@ -3,7 +3,7 @@
 a function using the method of bissection
 given it is found between the guess values.
 
-`bissection` is an auxiliary function of
+`bissection` is an internal function of
 the `McCabeThiele` toolbox for Julia.
 """
 function bissection(f, x1, x2)
