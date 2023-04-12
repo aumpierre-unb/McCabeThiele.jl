@@ -46,7 +46,7 @@ R=2;
 S=qR2S(x,q,R)
 ```
 """
-function qR2S(X::Vector{Float64}, q::Float64, R::Float64)
+function qR2S(X::Vector{Float64}, q::Number, R::Number)
     xD = X[1]
     xF = X[2]
     xB = X[3]

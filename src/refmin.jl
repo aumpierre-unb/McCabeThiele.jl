@@ -61,7 +61,7 @@ q=1;
 r=refmin(y,x,q)
 ```
 """
-function refmin(data::Matrix{Float64}, X::Vector{Float64}, q::Float64)
+function refmin(data::Matrix{Float64}, X::Vector{Float64}, q::Number)
     xD = X[1]
     xF = X[2]
     if xD < xF
