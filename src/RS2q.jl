@@ -1,5 +1,5 @@
 @doc raw"""
-`q=RS2q(X::Vector{Float64}, R::Number, S::Number)`
+`RS2q(X::Vector{Float64}, R::Number, S::Number)`
 
 `RS2q` computes the feed quality
 of a distillation column

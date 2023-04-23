@@ -1,5 +1,5 @@
 @doc raw"""
-`S=qR2S(X::Vector{Float64}, q::Number, R::Number)`
+`qR2S(X::Vector{Float64}, q::Number, R::Number)`
 
 `qR2S` computes the reflux ratio at the bottom
 of a distillation column

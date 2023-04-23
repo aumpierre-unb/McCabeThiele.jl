@@ -5,7 +5,7 @@ include("RS2q.jl")
 include("qS2R.jl")
 
 @doc raw"""
-`N=stages(data::Matrix{Float64}, X::Vector{Float64}, q::Number, R::Number, updown::Bool=true, fig::Bool=true)`
+`stages(data::Union{Matrix{Float64},Function}, X::Vector{Float64}; q::Number=NaN, R::Number=NaN, S::Number=NaN, updown::Bool=true, fig::Bool=true)`
 
 `stages` computes the number of theoretical stages
 of a distillation column
