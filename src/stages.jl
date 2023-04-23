@@ -46,7 +46,7 @@ the composition of the distillate is 88 %,
 the composition of the feed is 46 %,
 the composition of the column's bottom product is 11 %,
 the feed is a liquid-vapor equilibrium
-with 0.46 vapor at the feed stage and
+with 0.44 vapor at the feed stage and
 the reflux ratio at the top of the column is 70 % higher
 than the minimum reflux ratio:
 
@@ -63,7 +63,7 @@ data=[0.  0.;
       0.9 0.974;
       1.  1.];
 x=[0.88;0.46;0.11];
-qf=1-0.46;
+qf=1-0.44;
 r,s=refmin(data,x,qf)
 N=stages(data,x,q=qf,R=1.70*r,updown=false,fig=false)
 ```
