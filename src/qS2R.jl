@@ -1,5 +1,5 @@
 @doc raw"""
-`qS2R(X::Vector{Float64}, q::Number, S::Number)`
+`qS2R(z::Vector{Float64}, q::Number, S::Number)`
 
 `qS2R` computes the reflux ratio at the top
 of a distillation column
@@ -22,7 +22,7 @@ Compute the reflux ratio at the top of the column given
 the composition of the distillate is 88 %,
 the composition of the feed is 46 %,
 the composition of the column's bottom product is 11 %,
-the feed is saturated liquid q = 1 and
+the feed is saturated liquid and
 the reflux ratio at the bottom of the column is 2.5:
 
 ```
@@ -32,8 +32,8 @@ S=2.5;
 R=qS2R(x,q,S)
 ```
 """
-function qS2R(X::Vector{Float64}, q::Number, S::Number)
-    xD, xF, xB = X
+function qS2R(z::Vector{Float64}, q::Number, S::Number)
+    xD, xF, xB = z
     if xD < xF || xB > xF
         error("Inconsistent feed and/or products compositions.")
     end

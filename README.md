@@ -74,7 +74,7 @@ If fig = false is given, no plot is shown.
 **Syntax:**
 
 ```julia
-stages(data::Union{Matrix{Float64},Function},X::Vector{Float64};
+stages(data::Union{Matrix{Float64},Function},z::Vector{Float64};
   q::Number=NaN,R::Number=NaN,S::Number=NaN,updown::Bool=true,fig::Bool=true)
 ```
 
@@ -119,7 +119,7 @@ If feed is a saturated liquid, feed quality q = 1, feed quality is reset to q = 
 **Syntax:**
 
 ```julia
-refmin(data::Union{Matrix{Float64},Function},X::Vector{Float64},q::Number)
+refmin(data::Union{Matrix{Float64},Function},z::Vector{Float64},q::Number)
 ```
 
 **Examples:**
@@ -161,12 +161,12 @@ If feed is a saturated liquid, feed quality q = 1, feed quality is reset to q = 
 **Syntax:**
 
 ```julia
-qR2S(X::Vector{Float64},q::Number,R::Number)
+qR2S(z::Vector{Float64},q::Number,R::Number)
 ```
 
 **Examples:**
 
-Compute the reflux ratio at the bottom of the column given the composition of the distillate is 88 %, the composition of the feed is 46 %, the composition of the column's bottom product is 11 %, the feed is saturated liquid q = 1 and the reflux ratio at the top of the column is 2:
+Compute the reflux ratio at the bottom of the column given the composition of the distillate is 88 %, the composition of the feed is 46 %, the composition of the column's bottom product is 11 %, the feed is saturated liquid and the reflux ratio at the top of the column is 2:
 
 ```julia
 x=[0.88;0.46;0.11];
@@ -184,17 +184,12 @@ If feed is a saturated liquid, feed quality q = 1, feed quality is reset to q = 
 **Syntax:**
 
 ```julia
-qS2R(X::Vector{Float64},q::Number,S::Number)
+qS2R(z::Vector{Float64},q::Number,S::Number)
 ```
 
 **Examples:**
 
-Compute the reflux ratio at the top of the column given
-the composition of the distillate is 88 %,
-the composition of the feed is 46 %,
-the composition of the column's bottom product is 11 %,
-the feed is saturated liquid q = 1 and
-the reflux ratio at the bottom of the column is 2.5:
+Compute the reflux ratio at the top of the column given the composition of the distillate is 88 %, the composition of the feed is 46 %, the composition of the column's bottom product is 11 %, the feed is saturated liquid and the reflux ratio at the bottom of the column is 2.5:
 
 ```julia
 x=[0.88;0.46;0.11];
@@ -212,17 +207,12 @@ If feed is a saturated liquid, feed quality q = 1, feed quality is reset to q = 
 **Syntax:**
 
 ```julia
-RS2q(X::Vector{Float64}, R::Number, S::Number)
+RS2q(z::Vector{Float64}, R::Number, S::Number)
 ```
 
 **Examples:**
 
-Compute the reflux ratio at the top of the column given
-the composition of the distillate is 88 %,
-the composition of the feed is 46 %,
-the composition of the column's bottom product is 11 %,
-the feed is saturated liquid q = 1 and
-the reflux ratio at the bottom of the column is 2.5:
+Compute the reflux ratio at the top of the column given the composition of the distillate is 88 %, the composition of the feed is 46 %, the composition of the column's bottom product is 11 %, the reflux ratio at the top of the column is 2 and reflux ratio at the bottom of the column is 2.5:
 
 ```julia
 x=[0.88;0.46;0.11];

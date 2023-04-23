@@ -1,5 +1,5 @@
 @doc raw"""
-`RS2q(X::Vector{Float64}, R::Number, S::Number)`
+`RS2q(z::Vector{Float64}, R::Number, S::Number)`
 
 `RS2q` computes the feed quality
 of a distillation column
@@ -32,8 +32,8 @@ S=2.5;
 q=RS2q(x,R,S)
 ```
 """
-function RS2q(X::Vector{Float64}, R::Number, S::Number)
-    xD, xF, xB = X
+function RS2q(z::Vector{Float64}, R::Number, S::Number)
+    xD, xF, xB = z
     if xD < xF || xB > xF
         println("Inconsistent feed and/or products compositions.")
         return

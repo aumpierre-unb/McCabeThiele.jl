@@ -5,7 +5,7 @@ include("RS2q.jl")
 include("qS2R.jl")
 
 @doc raw"""
-`stages(data::Union{Matrix{Float64},Function}, X::Vector{Float64}; q::Number=NaN, R::Number=NaN, S::Number=NaN, updown::Bool=true, fig::Bool=true)`
+`stages(data::Union{Matrix{Float64},Function}, z::Vector{Float64}; q::Number=NaN, R::Number=NaN, S::Number=NaN, updown::Bool=true, fig::Bool=true)`
 
 `stages` computes the number of theoretical stages
 of a distillation column
@@ -87,8 +87,8 @@ r,s=refmin(y,x,qf)
 N=stages(y,x,q=qf,R=1.70*r)
 ```
 """
-function stages(data::Union{Matrix{Float64},Function}, X::Vector{Float64}; q::Number=NaN, R::Number=NaN, S::Number=NaN, updown::Bool=true, fig::Bool=true)
-    xD, xF, xB = X
+function stages(data::Union{Matrix{Float64},Function}, z::Vector{Float64}; q::Number=NaN, R::Number=NaN, S::Number=NaN, updown::Bool=true, fig::Bool=true)
+    xD, xF, xB = z
     if xD < xF || xB > xF
         println("Inconsistent feed and/or products compositions.")
         return
@@ -112,17 +112,17 @@ function stages(data::Union{Matrix{Float64},Function}, X::Vector{Float64}; q::Nu
         be given alone.""")
     end
     if a == [1, 0, 1]
-        R = qS2R(X, q, S)
+        R = qS2R(z, q, S)
     elseif a == [0, 1, 1]
-        q = RS2q(X, R, S)
+        q = RS2q(z, R, S)
     end
-    r = refmin(data, X, q)[1]
+    r = refmin(data, z, q)[1]
     if R <= r
         error("Minimum reflux ratios exceeded.")
     end
-    N, X, x, y = xyRq2N(f, X, q, R, updown)
+    N, z, x, y = xyRq2N(f, z, q, R, updown)
     if fig
-        doplot(dots, updown, f, x, y, data, X, q, R)
+        doplot(dots, updown, f, x, y, data, z, q, R)
     end
     N
 end
