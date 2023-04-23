@@ -1,6 +1,6 @@
 ### TODO
 
-### McCabeThiele 0.1.7 (2023-04-24)
+### McCabeThiele 1.0.0 (2023-04-24)
 * Major changes on functions
 * stages modified to accept any combination
   of two parameters among the feed quality,
