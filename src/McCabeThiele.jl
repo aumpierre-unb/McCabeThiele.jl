@@ -16,7 +16,7 @@ module McCabeThiele
 using Plots
 using Test
 
-export stages, refmin, qR2S
+export stages, refmin, qR2S, qS2R, RS2q
 
 include("stages.jl")
 include("stages_updown.jl")
