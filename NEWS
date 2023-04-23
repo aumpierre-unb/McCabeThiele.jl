@@ -1,5 +1,12 @@
 ### TODO
 
+### McCabeThiele 0.1.7 (2023-04-24)
+* Major changes on functions
+* stages modified to accept any combination
+  of two parameters among the feed quality,
+  the reflux ratio at the top of the column or
+  the reflux ratio at the bottom of the column
+
 ### McCabeThiele 0.1.7 (2023-04-09)
 * Minor changes in docstrings
 
