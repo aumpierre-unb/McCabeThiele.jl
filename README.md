@@ -54,6 +54,8 @@ McCabeThiele provides the following functions:
 - **stages**
 - **refmin**
 - **qR2S**
+- **qS2R**
+- **RS2q**
 
 ### **stages**
 
