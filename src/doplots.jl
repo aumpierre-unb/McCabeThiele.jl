@@ -19,7 +19,7 @@ function doplot(dots, updown, f, x, y, data, X, q, R)
         framestyle=:box,
         grid=:true,
         minorgrid=:true,
-        size=(600, 600))
+        size=(800, 600))
     if dots
         X = data[:, 1]
         Y = data[:, 2]
