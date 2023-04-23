@@ -45,8 +45,6 @@ You can cite all versions (both released and pre-released), by using
 [10.5281/zenodo.7126164](https://doi.org/10.5281/zenodo.7126164).
 This DOI represents all versions, and will always resolve to the latest one.
 
-<!--For citation of the last released version of McCabeThiele, please check CITATION file at the [maintainer's repository](https://github.com/aumpierre-unb/McCabeThiele.jl).-->
-
 ## The McCabeThiele Module for Julia
 
 McCabeThiele provides the following functions:
