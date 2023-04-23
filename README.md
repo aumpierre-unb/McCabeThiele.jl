@@ -74,7 +74,7 @@ If fig = false is given, no plot is shown.
 **Syntax:**
 
 ```julia
-N=stages(data::Union{Matrix{Float64},Function},X::Vector{Float64};
+stages(data::Union{Matrix{Float64},Function},X::Vector{Float64};
   q::Number=NaN,R::Number=NaN,S::Number=NaN,updown::Bool=true,fig::Bool=true)
 ```
 
@@ -119,7 +119,7 @@ If feed is a saturated liquid, feed quality q = 1, feed quality is reset to q = 
 **Syntax:**
 
 ```julia
-r,s=refmin(data::Union{Matrix{Float64},Function},X::Vector{Float64},q::Number)
+refmin(data::Union{Matrix{Float64},Function},X::Vector{Float64},q::Number)
 ```
 
 **Examples:**
@@ -161,7 +161,7 @@ If feed is a saturated liquid, feed quality q = 1, feed quality is reset to q = 
 **Syntax:**
 
 ```julia
-S=qR2S(X::Vector{Float64},q::Number,R::Number)
+qR2S(X::Vector{Float64},q::Number,R::Number)
 ```
 
 **Examples:**
@@ -184,7 +184,7 @@ If feed is a saturated liquid, feed quality q = 1, feed quality is reset to q = 
 **Syntax:**
 
 ```julia
-S=qS2R(X::Vector{Float64},q::Number,S::Number)
+qS2R(X::Vector{Float64},q::Number,S::Number)
 ```
 
 **Examples:**
@@ -212,7 +212,7 @@ If feed is a saturated liquid, feed quality q = 1, feed quality is reset to q = 
 **Syntax:**
 
 ```julia
-q=RS2q(X::Vector{Float64}, R::Number, S::Number)
+RS2q(X::Vector{Float64}, R::Number, S::Number)
 ```
 
 **Examples:**
