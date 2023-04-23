@@ -18,7 +18,7 @@ feed quality is reset to q = 1 - 1e-10.
 `refmin` is a main function of
 the `McCabeThiele` toolbox for Julia.
 
-See also: `stages`, `qR2S`.
+See also: `stages`, `qR2S`, `qS2R`, `RS2q`.
 
 Examples
 ==========
@@ -29,7 +29,7 @@ the composition of the distillate is 88 %,
 the composition of the feed is 46 %,
 the composition of the column's bottom product is 11 % and
 the feed is a liquid-vapor equilibrium
-with 0.46 vapor at the feed stage.
+with 0.46 vapor at the feed stage:
 ```
 data=[0.  0.;
       0.1 0.212;
@@ -53,7 +53,7 @@ the function that compute the vapor fraction given the liquid fraction,
 the composition of the distillate is 88 %,
 the composition of the feed is 46 %,
 the composition of the column's bottom product is 11 % and
-the feed is saturated liquid at the feed stage.
+the feed is saturated liquid at the feed stage:
 
 ```
 y(x)=x.^0.9 .* (1-x).^1.2 + x;

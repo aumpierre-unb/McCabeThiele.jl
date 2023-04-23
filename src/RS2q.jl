@@ -14,7 +14,7 @@ feed quality is reset to q = 1 - 1e-10.
 `RS2q` is a main function of
 the `McCabeThiele` toolbox for Julia.
 
-See also: `stages`, `refmin`.
+See also: `stages`, `refmin`, `qR2S`, `qS2R`.
 
 Examples
 ==========

@@ -35,7 +35,7 @@ If fig = false is given, no plot is shown.
 `stages` is a main function of
 the `McCabeThiele` toolbox for Julia.
 
-See also: `refmin`, `qR2S`.
+See also: `refmin`, `qR2S`, `qS2R`, `RS2q`.
 
 Examples
 ==========
@@ -77,7 +77,7 @@ the composition of the column's bottom product is 11 %,
 the feed is saturated liquid at the feed stage and
 the reflux ratio at the top of the column is 70 % higher
 than the minimum reflux ratio and
-plot a schematic diagram of the solution.
+plot a schematic diagram of the solution:
 
 ```
 y(x)=x.^0.9 .* (1-x).^1.2 + x;
