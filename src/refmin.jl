@@ -29,7 +29,7 @@ the composition of the distillate is 88 %,
 the composition of the feed is 46 %,
 the composition of the column's bottom product is 11 % and
 the feed is a liquid-vapor equilibrium
-with 0.44 vapor at the feed stage:
+with 44 % vapor at the feed stage:
 ```
 data=[0.  0.;
       0.1 0.212;

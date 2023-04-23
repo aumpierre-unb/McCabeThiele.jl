@@ -80,7 +80,7 @@ stages(data::Union{Matrix{Float64},Function},z::Vector{Float64};
 
 **Examples:**
 
-Compute the number of theoretical stages of a distillation column from the bottom to the top of the column given a matrix that relates the liquid fraction and the vapor fraction, the composition of the distillate is 88 %, the composition of the feed is 46 %, the composition of the column's bottom product is 11 %, the feed is a liquid-vapor equilibrium with 0.44 vapor at the feed stage and the reflux ratio at the top of the column is 70 % higher than the minimum reflux ratio:
+Compute the number of theoretical stages of a distillation column from the bottom to the top of the column given a matrix that relates the liquid fraction and the vapor fraction, the composition of the distillate is 88 %, the composition of the feed is 46 %, the composition of the column's bottom product is 11 %, the feed is a liquid-vapor equilibrium with 44 % vapor at the feed stage and the reflux ratio at the top of the column is 70 % higher than the minimum reflux ratio:
 
 ```julia
 data=[0.  0.;
@@ -124,7 +124,7 @@ refmin(data::Union{Matrix{Float64},Function},z::Vector{Float64},q::Number)
 
 **Examples:**
 
-Compute the minimum value of the reflux ratio of a distillation column given a matrix that relates the liquid fraction and the vapor fraction, the composition of the distillate is 88 %, the composition of the feed is 46 %, the composition of the column's bottom product is 11 % and the feed is a liquid-vapor equilibrium with 0.44 vapor at the feed stage:
+Compute the minimum value of the reflux ratio of a distillation column given a matrix that relates the liquid fraction and the vapor fraction, the composition of the distillate is 88 %, the composition of the feed is 46 %, the composition of the column's bottom product is 11 % and the feed is a liquid-vapor equilibrium with 44 % vapor at the feed stage:
 
 ```julia
 data=[0.  0.;
