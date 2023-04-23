@@ -11,11 +11,7 @@ the bottom to the top of the column.
 the `McCabeThiele` toolbox for Julia.
 """
 function stages_updown(f, X, R)
-    xD = X[1]
-    xF = X[2]
-    xB = X[3]
-    xi = X[4]
-    yi = X[5]
+    xD, xF, xB, xi, yi = X
     x = [xD]
     y = [xD]
     while x[end] > xB
@@ -27,6 +23,5 @@ function stages_updown(f, X, R)
             y = [y; (xB - yi) / (xB - xi) * (x[end] - xB) + xB]
         end
     end
-    N = length(x) - 1 - 1 + (x[end-1] - xB) / (x[end-1] - x[end])
-    return N, x, y
+    length(x) - 1 - 1 + (x[end-1] - xB) / (x[end-1] - x[end]), x, y
 end

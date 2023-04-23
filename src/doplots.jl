@@ -10,11 +10,7 @@ McCabe-Thiele method.
 the `McCabeThiele` toolbox for Julia.
 """
 function doplot(dots, updown, f, x, y, data, X, q, R)
-    xD = X[1]
-    xF = X[2]
-    xB = X[3]
-    xi = X[4]
-    yi = X[5]
+    xD, xF, xB, xi, yi = X
     plot(xlabel="x",
         ylabel="y",
         xlims=(0, 1),
@@ -75,14 +71,15 @@ function doplot(dots, updown, f, x, y, data, X, q, R)
         color=:magenta,
         linestyle=:dash)
     if updown
-        display(plot!(x, y,
+        plot!(x, y,
             seriestype=:steppost,
             color=:cyan,
-            linestyle=:solid))
+            linestyle=:solid)
     else
-        display(plot!(x, y,
+        plot!(x, y,
             seriestype=:steppre,
             color=:cyan,
-            linestyle=:solid))
+            linestyle=:solid)
     end
+    display(plot!())
 end
