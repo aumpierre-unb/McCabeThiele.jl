@@ -117,7 +117,7 @@ If feed is a saturated liquid, feed quality q = 1, feed quality is reset to q = 
 **Syntax:**
 
 ```julia
-r,s=refmin(data::Union{Matrix{Float64},Function}, X::Vector{Float64}, q::Number)
+r,s=refmin(data::Union{Matrix{Float64},Function},X::Vector{Float64},q::Number)
 ```
 
 **Examples:**
@@ -159,7 +159,7 @@ If feed is a saturated liquid, feed quality q = 1, feed quality is reset to q = 
 **Syntax:**
 
 ```julia
-S=qR2S(X::Vector{Float64}, q::Number, R::Number)
+S=qR2S(X::Vector{Float64},q::Number,R::Number)
 ```
 
 **Examples:**
@@ -171,6 +171,62 @@ x=[0.88;0.46;0.11];
 q=1;
 R=2;
 S=qR2S(x,q,R)
+```
+
+### **qS2R**
+
+qS2R computes the reflux ratio at the top of a distillation column using the McCabe-Thiele method given the compositions of the products and the feed, the feed quality and the reflux ratio at the bottom of the column.
+
+If feed is a saturated liquid, feed quality q = 1, feed quality is reset to q = 1 - 1e-10.
+
+**Syntax:**
+
+```julia
+S=qS2R(X::Vector{Float64},q::Number,S::Number)
+```
+
+**Examples:**
+
+Compute the reflux ratio at the top of the column given
+the composition of the distillate is 88 %,
+the composition of the feed is 46 %,
+the composition of the column's bottom product is 11 %,
+the feed is saturated liquid q = 1 and
+the reflux ratio at the bottom of the column is 2.5:
+
+```julia
+x=[0.88;0.46;0.11];
+q=1;
+S=2.5;
+R=qS2R(x,q,S)
+```
+
+### **RS2q**
+
+RS2q computes the feed quality of a distillation column using the McCabe-Thiele method given the compositions of the products and the feed, the reflux ratio at the bottom of the column and the reflux ratio at the top of the column.
+
+If feed is a saturated liquid, feed quality q = 1, feed quality is reset to q = 1 - 1e-10.
+
+**Syntax:**
+
+```julia
+q=RS2q(X::Vector{Float64}, R::Number, S::Number)
+```
+
+**Examples:**
+
+Compute the reflux ratio at the top of the column given
+the composition of the distillate is 88 %,
+the composition of the feed is 46 %,
+the composition of the column's bottom product is 11 %,
+the feed is saturated liquid q = 1 and
+the reflux ratio at the bottom of the column is 2.5:
+
+```julia
+x=[0.88;0.46;0.11];
+R=2;
+S=2.5;
+q=RS2q(x,R,S)
 ```
 
 ### See Also
