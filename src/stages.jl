@@ -1,5 +1,8 @@
 include("xyRq2N.jl")
 include("doplots.jl")
+include("refmin.jl")
+include("RS2q.jl")
+include("qS2R.jl")
 
 @doc raw"""
 `N=stages(data::Matrix{Float64}, X::Vector{Float64}, q::Number, R::Number, updown::Bool=true, fig::Bool=true)`
@@ -60,10 +63,9 @@ data=[0.  0.;
       0.9 0.974;
       1.  1.];
 x=[0.88;0.46;0.11];
-q=0.56;
-r,s=refmin(data,x,q);
-R=1.70*r;
-N=stages(data,x,q,R,false,false)
+qf=1-0.46;
+r,s=refmin(data,x,qf)
+N=stages(data,x,q=qf,R=1.70*r,updown=false,fig=false)
 ```
 
 Compute the number of theoretical stages of a distillation column
@@ -80,10 +82,9 @@ plot a schematic diagram of the solution.
 ```
 y(x)=x.^0.9 .* (1-x).^1.2 + x;
 x=[0.88;0.46;0.11];
-q=1;
-r,s=refmin(y,x,q);
-R=1.70*r;
-N=stages(y,x,q=1,R=1.70*r)
+qf=1;
+r,s=refmin(y,x,qf)
+N=stages(y,x,q=qf,R=1.70*r)
 ```
 """
 function stages(data::Union{Matrix{Float64},Function}, X::Vector{Float64}; q::Number=NaN, R::Number=NaN, S::Number=NaN, updown::Bool=true, fig::Bool=true)
@@ -102,7 +103,6 @@ function stages(data::Union{Matrix{Float64},Function}, X::Vector{Float64}; q::Nu
         f = data
         dots=false
     end
-    
     a = isnan.([q, R, S]) .!= 1
     if sum(a) != 2
         error("""stages requires that two parameter among

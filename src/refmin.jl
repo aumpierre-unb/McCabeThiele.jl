@@ -43,7 +43,7 @@ data=[0.  0.;
       0.9 0.974;
       1.  1.];
 x=[0.88;0.46;0.11];
-q=0.56;
+q=1-0.46;
 r,s=refmin(data,x,q)
 ```
 
@@ -76,7 +76,6 @@ function refmin(data::Union{Matrix{Float64},Function}, X::Vector{Float64}, q::Nu
     else
         f = data
     end
-    
     foo(x) = f(x) - (q / (q - 1) * x - xF / (q - 1))
     xi = bissection(foo, 0.0, 1.0)
     yi = q / (q - 1) * xi - xF / (q - 1)

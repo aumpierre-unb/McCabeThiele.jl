@@ -1,6 +1,5 @@
 include("stages_updown.jl")
 include("stages_downup.jl")
-include("interp1.jl")
 
 @doc raw"""
 `N=xyRq2N(data::Matrix{Float64}, X::Vector{Float64}, q::Number, R::Number, updown::Bool=true)`
