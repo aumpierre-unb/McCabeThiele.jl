@@ -59,10 +59,7 @@ McCabeThiele provides the following functions:
 
 stages computes the number of theoretical stages of a distillation column using the McCabe-Thiele method, given a function or a matrix of the liquid and the vapor fraction, the compositions of the feed and the products, the feed quality, and the reflux ratio at the top of the column.
 
-By default, feed is a saturated liquid, q = 1.
-
-If feed is a saturated liquid at the fedd stage, q = 1,
-feed quality is reset to q = 1 - 1e-10.
+c
 
 By default, theoretical stages are computed from the stripping section to the rectifying section, updown = true.
 
@@ -113,9 +110,9 @@ N=stages(y,x,q=1,R=1.70*r)
 
 refmin computes the minimum value of the reflux ratio of a distillation column using the McCabe-Thiele method, given a function or a matrix of the liquid and the vapor fraction, the compositions of the feed and the distillate, and the feed quality.
 
-By default, feed is a saturated liquid, q = 1.
+By default, feed is a saturated liquid at the feed stage, q = 1.
 
-If feed is a saturated liquid at the fedd stage, q = 1,
+If feed is a saturated liquid at the feed stage, q = 1,
 feed quality is reset to q = 1 - 1e-10.
 
 **Syntax:**

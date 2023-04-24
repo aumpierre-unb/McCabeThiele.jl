@@ -19,9 +19,9 @@ the feed quality,
 the reflux ratio at the top of the column and
 the reflux ratio at the bottom of the column.
 
-By default, feed is a saturated liquid, q = 1.
+By default, feed is a saturated liquid at the feed stage, q = 1.
 
-If feed is a saturated liquid at the fedd stage, q = 1,
+If feed is a saturated liquid at the feed stage, q = 1,
 feed quality is reset to q = 1 - 1e-10.
 
 By default, theoretical stages are computed
