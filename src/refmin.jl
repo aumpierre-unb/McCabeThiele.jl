@@ -71,11 +71,11 @@ function refmin(data::Union{Matrix{Float64},Function}, z::Vector{Float64}, q::Nu
         q = 1 - 1e-10
     end
     if isa(data, Matrix)
-        g(x) = interp1(data[:, 1], data[:, 2], x)
+        f(x) = interp1(data[:, 1], data[:, 2], x)
     else
-        g = data
+        f = data
     end
-    foo(x) = g(x) - (q / (q - 1) * x - xF / (q - 1))
+    foo(x) = f(x) - (q / (q - 1) * x - xF / (q - 1))
     xi = bissection(foo, 0.0, 1.0)
     yi = q / (q - 1) * xi - xF / (q - 1)
     a = (xD - yi) / (xD - xi)
