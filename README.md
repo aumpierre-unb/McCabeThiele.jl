@@ -94,7 +94,7 @@ data=[0.  0.;
       1.  1.];
 x=[0.88;0.46;0.11];
 r,s=refmin(data,x,q=1-0.44)
-N=stages(data,x,q=q=1-0.44,R=1.70*r,updown=false,fig=false)
+N=stages(data,x,q=1-0.44,R=1.70*r,updown=false,fig=false)
 ```
 
 Compute the number of theoretical stages of a distillation column from the top to the bottom of the column given the function that compute the vapor fraction given the liquid fraction, the composition of the distillate is 88 %, the composition of the feed is 46 %, the composition of the column's bottom product is 11 %, the feed is saturated liquid at the feed stage and the reflux ratio at the top of the column is 70 % higher than the minimum reflux ratio and plot a schematic diagram of the solution:

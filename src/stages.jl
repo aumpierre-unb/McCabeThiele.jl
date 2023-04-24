@@ -64,7 +64,7 @@ data=[0.  0.;
       1.  1.];
 x=[0.88;0.46;0.11];
 r,s=refmin(data,x,q=1-0.44)
-N=stages(data,x,q=q=1-0.44,R=1.70*r,updown=false,fig=false)
+N=stages(data,x,q=1-0.44,R=1.70*r,updown=false,fig=false)
 ```
 
 Compute the number of theoretical stages of a distillation column
@@ -113,7 +113,7 @@ function stages(data::Union{Matrix{Float64},Function}, z::Vector{Float64}; q::Nu
     elseif a == [0, 1, 1]
         q = RS2q(z, R, S)
     end
-    r = refmin(data, z, q)[1]
+    r = refmin(data, z, q=q)[1]
     if R <= r
         error("Minimum reflux ratios exceeded.")
     end
