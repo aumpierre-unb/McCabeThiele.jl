@@ -62,8 +62,7 @@ function refmin(data, X, q)
     xD = X[1]
     xF = X[2]
     if xD < xF
-        println("Inconsistent feed and/or products compositions.")
-        return
+        error("Inconsistent feed and/or products compositions.")
     end
     if q == 1
         q = 1 - 1e-10
@@ -77,5 +76,5 @@ function refmin(data, X, q)
     xi = bissection(foo, 0.0, 1.0)
     yi = q / (q - 1) * xi - xF / (q - 1)
     alpha = (xD - yi) / (xD - xi)
-    return alpha / (1 - alpha)
+    alpha / (1 - alpha)
 end

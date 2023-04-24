@@ -65,8 +65,7 @@ r,s=refmin(y,x,q)
 function refmin(data::Union{Matrix{Float64},Function}, X::Vector{Float64}, q::Number)
     xD, xF, xB = X
     if xD < xF || xB > xF
-        println("Inconsistent feed and/or products compositions.")
-        return
+        error("Inconsistent feed and/or products compositions.")
     end
     if q == 1
         q = 1 - 1e-10
@@ -74,7 +73,7 @@ function refmin(data::Union{Matrix{Float64},Function}, X::Vector{Float64}, q::Nu
     if isa(data, Matrix)
         f(x) = interp1(data[:, 1], data[:, 2], x)
     else
-        f = data
+        f(x) = data(x)
     end
     foo(x) = f(x) - (q / (q - 1) * x - xF / (q - 1))
     xi = bissection(foo, 0.0, 1.0)

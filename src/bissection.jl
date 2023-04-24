@@ -15,5 +15,5 @@ function bissection(f, x1, x2)
             x2 = x
         end
     end
-    return x2
+    x2
 end

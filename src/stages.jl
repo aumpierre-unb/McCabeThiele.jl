@@ -90,8 +90,7 @@ N=stages(y,x,q=qf,R=1.70*r)
 function stages(data::Union{Matrix{Float64},Function}, z::Vector{Float64}; q::Number=NaN, R::Number=NaN, S::Number=NaN, updown::Bool=true, fig::Bool=true)
     xD, xF, xB = z
     if xD < xF || xB > xF
-        println("Inconsistent feed and/or products compositions.")
-        return
+        error("Inconsistent feed and/or products compositions.")
     end
     if q == 1
         q = 1 - 1e-10

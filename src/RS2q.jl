@@ -35,8 +35,7 @@ q=RS2q(x,R,S)
 function RS2q(z::Vector{Float64}, R::Number, S::Number)
     xD, xF, xB = z
     if xD < xF || xB > xF
-        println("Inconsistent feed and/or products compositions.")
-        return
+        error("Inconsistent feed and/or products compositions.")
     end
     xi = (xB / S + xD / (R + 1)) / ((S + 1) / S - R / (R + 1))
     yi = R / (R + 1) * xi + xD / (R + 1)
