@@ -2,7 +2,7 @@ include("bissection.jl")
 include("interp1.jl")
 
 @doc raw"""
-`refmin(data::Union{Matrix{Float64},Function}, X::Vector{Float64}, q::Number)`
+`refmin(data::Union{Matrix{Float64},Function}, z::Vector{Float64}, q::Number)`
 
 `refmin` computes the minimum reflux ratios
 at the top and the bottom of a distillation column
@@ -62,8 +62,8 @@ q=1;
 r,s=refmin(y,x,q)
 ```
 """
-function refmin(data::Union{Matrix{Float64},Function}, X::Vector{Float64}, q::Number)
-    xD, xF, xB = X
+function refmin(data::Union{Matrix{Float64},Function}, z::Vector{Float64}, q::Number)
+    xD, xF, xB = z
     if xD < xF || xB > xF
         error("Inconsistent feed and/or products compositions.")
     end
@@ -71,7 +71,8 @@ function refmin(data::Union{Matrix{Float64},Function}, X::Vector{Float64}, q::Nu
         q = 1 - 1e-10
     end
     if isa(data, Matrix)
-        f(x) = interp1(data[:, 1], data[:, 2], x)
+        g(x) = interp1(data[:, 1], data[:, 2], x)
+        f = g
     else
         f = data
     end
