@@ -93,9 +93,8 @@ data=[0.  0.;
       0.9 0.974;
       1.  1.];
 x=[0.88;0.46;0.11];
-qf=1-0.44;
-r,s=refmin(data,x,qf)
-N=stages(data,x,q=qf,R=1.70*r,updown=false,fig=false)
+r,s=refmin(data,x,q=1-0.44)
+N=stages(data,x,q=q=1-0.44,R=1.70*r,updown=false,fig=false)
 ```
 
 Compute the number of theoretical stages of a distillation column from the top to the bottom of the column given the function that compute the vapor fraction given the liquid fraction, the composition of the distillate is 88 %, the composition of the feed is 46 %, the composition of the column's bottom product is 11 %, the feed is saturated liquid at the feed stage and the reflux ratio at the top of the column is 70 % higher than the minimum reflux ratio and plot a schematic diagram of the solution:
@@ -103,9 +102,8 @@ Compute the number of theoretical stages of a distillation column from the top t
 ```julia
 y(x)=x.^0.9 .* (1-x).^1.2 + x;
 x=[0.88;0.46;0.11];
-qf=1;
-r,s=refmin(y,x,qf)
-N=stages(y,x,q=qf,R=1.70*r)
+r,s=refmin(y,x,q=1)
+N=stages(y,x,q=1,R=1.70*r)
 ```
 
 ### **refmin**
@@ -137,8 +135,7 @@ data=[0.  0.;
       0.9 0.974;
       1.  1.];
 x=[0.88;0.46;0.11];
-q=1-0.44;
-r,s=refmin(data,x,q)
+r,s=refmin(data,x,q=1-0.44)
 ```
 
 Compute the minimum value of the reflux ratio of a distillation column given the function that compute the vapor fraction given the liquid fraction, the composition of the distillate is 88 %, the composition of the feed is 46 %, the composition of the column's bottom product is 11 % and the feed is saturated liquid at the feed stage:
@@ -146,8 +143,7 @@ Compute the minimum value of the reflux ratio of a distillation column given the
 ```julia
 y(x)=x.^0.9 .* (1-x).^1.2 + x;
 x=[0.88;0.46;0.11];
-q=1;
-r,s=refmin(y,x,q)
+r,s=refmin(y,x,q=1)
 ```
 
 ### **qR2S**

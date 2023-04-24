@@ -63,9 +63,8 @@ data=[0.  0.;
       0.9 0.974;
       1.  1.];
 x=[0.88;0.46;0.11];
-qf=1-0.44;
-r,s=refmin(data,x,qf)
-N=stages(data,x,q=qf,R=1.70*r,updown=false,fig=false)
+r,s=refmin(data,x,q=1-0.44)
+N=stages(data,x,q=q=1-0.44,R=1.70*r,updown=false,fig=false)
 ```
 
 Compute the number of theoretical stages of a distillation column
@@ -82,9 +81,8 @@ plot a schematic diagram of the solution:
 ```
 y(x)=x.^0.9 .* (1-x).^1.2 + x;
 x=[0.88;0.46;0.11];
-qf=1;
-r,s=refmin(y,x,qf)
-N=stages(y,x,q=qf,R=1.70*r)
+r,s=refmin(y,x,q=1)
+N=stages(y,x,q=1,R=1.70*r)
 ```
 """
 function stages(data::Union{Matrix{Float64},Function}, z::Vector{Float64}; q::Number=NaN, R::Number=NaN, S::Number=NaN, updown::Bool=true, fig::Bool=true)

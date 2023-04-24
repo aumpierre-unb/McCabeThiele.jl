@@ -43,8 +43,7 @@ data=[0.  0.;
       0.9 0.974;
       1.  1.];
 x=[0.88;0.46;0.11];
-q=1-0.44;
-r,s=refmin(data,x,q)
+r,s=refmin(data,x,q=1-0.44)
 ```
 
 Compute the minimum value of the reflux ratio
@@ -58,11 +57,10 @@ the feed is saturated liquid at the feed stage:
 ```
 y(x)=x.^0.9 .* (1-x).^1.2 + x;
 x=[0.88;0.46;0.11];
-q=1;
-r,s=refmin(y,x,q)
+r,s=refmin(y,x,q=1)
 ```
 """
-function refmin(data::Union{Matrix{Float64},Function}, z::Vector{Float64}, q::Number)
+function refmin(data::Union{Matrix{Float64},Function}, z::Vector{Float64}; q::Number=1)
     xD, xF, xB = z
     if xD < xF || xB > xF
         error("Inconsistent feed and/or products compositions.")
