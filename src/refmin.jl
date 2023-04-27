@@ -2,7 +2,7 @@ include("bissection.jl")
 include("interp1.jl")
 
 @doc raw"""
-`refmin(data::Union{Matrix{Float64},Function}, z::Vector{Float64}, q::Number)`
+`refmin(data::Union{Matrix{Float64},Function}, z::Vector{Float64}; q::Number=1)`
 
 `refmin` computes the minimum reflux ratios
 at the top and the bottom of a distillation column

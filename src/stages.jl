@@ -97,10 +97,10 @@ function stages(data::Union{Matrix{Float64},Function}, z::Vector{Float64}; q::Nu
     end
     if isa(data, Matrix)
         f(x) = interp1(data[:, 1], data[:, 2], x)
-        dots=true
+        dots = true
     else
         f = data
-        dots=false
+        dots = false
     end
     a = isnan.([q, R, S]) .!= 1
     if sum(a) != 2
@@ -120,8 +120,9 @@ function stages(data::Union{Matrix{Float64},Function}, z::Vector{Float64}; q::Nu
         error("Minimum reflux ratios exceeded.")
     end
     N, z, x, y = xyRq2N(f, z, q, R, updown)
-    if fig
-        doplot(dots, updown, f, x, y, data, z, q, R)
+    if !fig
+        return N
     end
+    doplot(dots, updown, f, x, y, data, z, q, R)
     N
 end
