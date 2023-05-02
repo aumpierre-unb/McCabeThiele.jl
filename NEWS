@@ -1,11 +1,12 @@
 ### TODO
 
-### McCabeThiele 1.0.0-alpha (2023-04-24)
-* Major changes on functions
+### McCabeThiele 1.0.0-alpha (2023-05-02)
+* Main functions' parameters typed
 * stages modified to accept any combination
   of two parameters among the feed quality,
   the reflux ratio at the top of the column or
   the reflux ratio at the bottom of the column
+* New functions qS2R and RS2q
 
 ### McCabeThiele 0.1.7 (2023-04-09)
 * Minor changes in docstrings
