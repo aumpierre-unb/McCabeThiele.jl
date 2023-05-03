@@ -1,6 +1,6 @@
 ### TODO
 
-### McCabeThiele 1.0.0-alpha (2023-05-02)
+### McCabeThiele 1.0.0 (2023-05-03)
 * Main functions' parameters typed
 * stages modified to accept any combination
   of two parameters among the feed quality,
