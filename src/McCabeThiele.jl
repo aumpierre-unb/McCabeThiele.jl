@@ -24,7 +24,7 @@ include("stages_downup.jl")
 include("refmin.jl")
 include("qR2S.jl")
 include("doplots.jl")
-include("bissection.jl")
+include("bisection.jl")
 include("interp1.jl")
 
 end
