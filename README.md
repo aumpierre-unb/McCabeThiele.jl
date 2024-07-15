@@ -3,6 +3,7 @@
 [![DOI](https://zenodo.org/badge/543161141.svg)](https://doi.org/10.5281/zenodo.7126164)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![version](https://juliahub.com/docs/McCabeThiele/version.svg)](https://juliahub.com/ui/Packages/McCabeThiele/WauTj)
+[![pkgeval](https://juliahub.com/docs/General/McCabeThiele/stable/pkgeval.svg)](https://juliahub.com/ui/Packages/General/McCabeThiele)
 
 ## Installing and Loading McCabeThiele
 
