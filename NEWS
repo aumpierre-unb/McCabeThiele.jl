@@ -1,7 +1,8 @@
 ### TODO
 
 ### McCabeThiele 1.0.1-alpha (2024-07-15)
-Manifest.toml upgraded
+* Manifest.toml upgraded
+* Minor changes in docstrings
 
 ### McCabeThiele 1.0.0 (2023-05-03)
 * Main functions' parameters typed
