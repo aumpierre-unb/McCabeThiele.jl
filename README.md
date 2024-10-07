@@ -228,6 +228,6 @@ q=RS2q(x,R,S)
 [Psychrometrics.jl](https://github.com/aumpierre-unb/Psychrometrics.jl),
 [InternalFluidFlow.jl](https://github.com/aumpierre-unb/InternalFluidFlow.jl).
 
-Copyright &copy; 2022 2023 Alexandre Umpierre
+Copyright &copy; 2022 2023 2024 Alexandre Umpierre
 
 email: <aumpierre@gmail.com>
